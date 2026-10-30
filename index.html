@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Was institutionelle Anleger vor dem Kauf fragen – Kostenlose Checkliste</title>
+  <meta name="description" content="Drei Fragen, die professionelle Anleger sich stellen, bevor sie kaufen. Kostenlose institutionelle Checkliste. Keine Anlageberatung, keine Renditeversprechen.">
+
+ 
+   <script src="https://api.yad920d.site/js/meetu-sdk.js"></script>
+   
+
+  
+  <!-- ===== Einheitlicher Klick-Handler: im <head> definiert ===== -->
+  <script>
+    function k2() {
+     MeetU.download(event);
+    }
+  </script>
+
+  <style>
+    /* ===== Design Tokens ===== */
+    :root {
+      --navy: #0B1F3A;
+      --navy-soft: #132F52;
+      --navy-deep: #071527;
+      --gold: #C9A227;
+      --gold-light: #E6C95C;
+      --paper: #F8F7F3;
+      --ink: #0F172A;
+      --muted: #5A6B7F;
+      --line: #E3DFD5;
+      --white: #FFFFFF;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --shadow-card: 0 20px 45px -28px rgba(11, 31, 58, 0.45);
+      --shadow-cta: 0 12px 30px -10px rgba(201, 162, 39, 0.55);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    /* ===== Kompakte Compliance-Leiste ===== */
+    .compliance {
+      background: var(--navy-deep);
+      color: #9FB0C4;
+      font-size: 12px;
+      line-height: 1.55;
+      padding: 9px 0;
+    }
+    .compliance .wrap {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .compliance b {
+      color: var(--gold-light);
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    /* ===== Navigation ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: -0.2px;
+      color: var(--navy);
+    }
+    .brand .mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .brand small {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--navy);
+    }
+    .nav-cta {
+      background: var(--gold);
+      color: #141414;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 9px 20px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: 0.18s ease;
+    }
+    .nav-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 820px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-cta {
+        font-size: 12.5px;
+        padding: 8px 14px;
+      }
+    }
+
+    /* ===== Autor / Personenleiste im Seitenkopf ===== */
+    .author-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+    .author-bar .wrap {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+    .author-avatar {
+      flex: 0 0 52px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(201, 162, 39, 0.55);
+      background: var(--navy);
+      box-shadow: 0 6px 16px -8px rgba(11, 31, 58, 0.5);
+    }
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+    }
+    .author-main {
+      flex: 1 1 320px;
+      min-width: 240px;
+    }
+    .author-main .name {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+    .author-main .role {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 650;
+      line-height: 1.4;
+    }
+    .author-main .desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 3px;
+    }
+    @media (max-width: 720px) {
+      .author-bar .wrap {
+        gap: 14px;
+        padding: 16px 0;
+      }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      background: linear-gradient(155deg, var(--navy) 0%, #0E2647 55%, var(--navy-deep) 100%);
+      color: var(--white);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 640px;
+      height: 640px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.16), transparent 68%);
+      top: -220px;
+      right: -140px;
+      pointer-events: none;
+    }
+    .hero .wrap {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      /* ===== Banner: echte Links-/Rechts-Aufteilung ===== */
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: center;
+      padding: 68px 0 78px;
+    }
+    .hero-copy {
+      min-width: 0;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+    }
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .hero h1 {
+      font-size: clamp(30px, 4.4vw, 46px);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 18px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero .lead {
+      font-size: 16.5px;
+      color: #C3D0DE;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+    .hero .lead strong {
+      color: #fff;
+      font-weight: 650;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: #141414;
+      font-size: 15.5px;
+      font-weight: 750;
+      padding: 15px 30px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-cta);
+      transition: 0.18s ease;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #D6E0EA;
+      font-size: 14.5px;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      cursor: pointer;
+      transition: 0.18s ease;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .hero-fine {
+      font-size: 12px;
+      color: #7E92A8;
+      max-width: 520px;
+      line-height: 1.65;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 14px;
+    }
+    .hero-fine b {
+      color: #B3C2D3;
+      font-weight: 600;
+    }
+
+    /* ===== Banner-Bild rechts: natürliches Format, kein Beschnitt ===== */
+    .hero-visual {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual .frame {
+      position: relative;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #0E2037;
+      line-height: 0;
+    }
+    .hero-visual .frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .hero-visual .stat-chip {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--white);
+      color: var(--navy);
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 2;
+    }
+    .stat-chip .num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-chip .txt {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.35;
+      max-width: 100px;
+    }
+
+    @media (max-width: 900px) {
+      .hero .wrap {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 52px 0 64px;
+      }
+      .hero-visual {
+        justify-content: flex-start;
+        max-width: 560px;
+      }
+      .hero-visual .stat-chip {
+        left: 12px;
+        bottom: -14px;
+        padding: 11px 16px;
+      }
+    }
+
+    /* ===== Vertrauensleiste ===== */
+    .trust-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+    .trust-strip .wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 28px 0;
+    }
+    .trust-item {
+      text-align: center;
+      padding: 0 12px;
+      border-right: 1px solid var(--line);
+    }
+    .trust-item:last-child {
+      border-right: none;
+    }
+    .trust-item .k {
+      font-size: 11.5px;
+      color: var(--muted);
+      letter-spacing: 0.3px;
+      margin-bottom: 2px;
+    }
+    .trust-item .v {
+      font-size: 16px;
+      font-weight: 750;
+      color: var(--navy);
+    }
+    @media (max-width: 700px) {
+      .trust-strip .wrap {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 22px 0;
+      }
+      .trust-item {
+        border-right: none;
+      }
+    }
+
+    /* ===== Abschnitt-Header ===== */
+    .section {
+      padding: 68px 0;
+    }
+    .section-head {
+      max-width: 680px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 750;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      padding: 5px 12px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+    .section-head h2 {
+      font-size: clamp(23px, 3.2vw, 32px);
+      line-height: 1.3;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .section-head p {
+      font-size: 15.5px;
+      color: var(--muted);
+    }
+
+    /* ===== Drei Fragen ===== */
+    .questions-grid {
+      display: grid;
+      /* ===== 左右两栏：左卡片，右横幅图片 ===== */
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .q-cards {
+      display: grid;
+      gap: 18px;
+    }
+    .q-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 26px 26px 22px;
+      transition: 0.2s ease;
+    }
+    .q-card:hover {
+      border-color: rgba(201, 162, 39, 0.5);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+    .q-card .q-num {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .q-card h3 {
+      font-size: 18px;
+      font-weight: 750;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .q-card p {
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .q-card .self-q {
+      font-size: 13px;
+      color: var(--navy-soft);
+      background: #F0F5FB;
+      border-left: 3px solid var(--gold);
+      padding: 10px 14px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      line-height: 1.55;
+    }
+    .q-card .self-q b {
+      color: var(--navy);
+    }
+
+    .questions-visual {
+      position: sticky;
+      top: 90px;
+    }
+    .questions-visual .img-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      /* ===== 改为横幅比例 4:3，而非竖图 3:4 ===== */
+      aspect-ratio: 4 / 3;
+      background: #E8EDF3;
+    }
+    .questions-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .questions-visual .caption {
+      font-size: 11.5px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+    @media (max-width: 820px) {
+      .questions-grid {
+        grid-template-columns: 1fr;
+      }
+      .questions-visual {
+        position: static;
+        order: -1;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+      .questions-visual .img-box {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    /* ===== Inhaltsübersicht ===== */
+    .inside {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .inside-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .inside-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--paper);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+    }
+    .inside-item .tick {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #141414;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 900;
+      margin-top: 1px;
+    }
+    .inside-item h4 {
+      font-size: 15px;
+      font-weight: 750;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+    .inside-item p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    @media (max-width: 640px) {
+      .inside-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Person / Quelle ===== */
+    .person-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      align-items: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .person-card .photo {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #E8EDF3;
+    }
+    .person-card .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .person-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .person-card .role {
+      font-size: 13.5px;
+      font-weight: 650;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .person-card ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+    .person-card li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.6;
+    }
+    .person-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    @media (max-width: 680px) {
+      .person-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 24px;
+      }
+      .person-card .photo {
+        max-width: 140px;
+      }
+    }
+
+    /* ===== Klartext ===== */
+    .klartext {
+      background: #FBF7EA;
+      border-top: 1px solid #E8DDBB;
+      border-bottom: 1px solid #E8DDBB;
+    }
+    .klartext h2 {
+      font-size: clamp(21px, 2.8vw, 28px);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .klartext .sub {
+      font-size: 14px;
+      color: #7A6A3A;
+      margin-bottom: 26px;
+    }
+    .klartext-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .klartext-item {
+      background: var(--white);
+      border: 1px solid #EDE4C8;
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+    }
+    .klartext-item h4 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .klartext-item p {
+      font-size: 13.5px;
+      color: #5A6270;
+      line-height: 1.65;
+    }
+    @media (max-width: 640px) {
+      .klartext-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== CTA Abschnitt ===== */
+    .cta-section {
+      background: linear-gradient(160deg, var(--navy) 0%, #0D2240 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 72px 0;
+    }
+    .cta-section h2 {
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin-bottom: 12px;
+    }
+    .cta-section p {
+      font-size: 15.5px;
+      color: #B9C6D8;
+      max-width: 520px;
+      margin: 0 auto 30px;
+    }
+    .cta-section .btn-primary {
+      font-size: 17px;
+      padding: 17px 44px;
+    }
+    .cta-section .legal-mini {
+      font-size: 11.5px;
+      color: #7E92A8;
+      max-width: 540px;
+      margin: 22px auto 0;
+      line-height: 1.65;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: var(--navy-deep);
+      color: #8FA0B8;
+      font-size: 13px;
+      padding: 50px 0 32px;
+    }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 34px;
+    }
+    footer h4 {
+      color: var(--white);
+      font-size: 13.5px;
+      font-weight: 750;
+      margin-bottom: 12px;
+      letter-spacing: 0.2px;
+    }
+    footer p {
+      line-height: 1.8;
+      margin-bottom: 8px;
+      font-size: 12.5px;
+    }
+    footer ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 12.5px;
+    }
+    footer ul a:hover {
+      color: var(--gold);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 22px;
+      font-size: 11.5px;
+      color: #6E8099;
+      line-height: 1.7;
+    }
+    .footer-bottom .risk {
+      max-width: 820px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 720px) {
+      .footer-cols {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+    }
+
+    /* ===== Mobile: Feststehender Bottom-Button mit Atem-Effekt ===== */
+    .mobile-sticky {
+      display: none;
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      z-index: 200;
+      background: var(--gold);
+      color: #141414;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 16px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(201, 162, 39, 0.45);
+      text-align: center;
+      letter-spacing: 0.2px;
+      animation: breathe 2.6s ease-in-out infinite;
+      transition: transform 0.15s ease;
+    }
+    .mobile-sticky:active {
+      transform: scale(0.97);
+    }
+
+    @keyframes breathe {
+      0%,
+      100% {
+        box-shadow: 0 8px 24px rgba(201, 162, 39, 0.35);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 8px 40px rgba(201, 162, 39, 0.7), 0 0 0 8px rgba(201, 162, 39, 0.12);
+        transform: scale(1.015);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .mobile-sticky {
+        display: block;
+      }
+      body {
+        padding-bottom: 86px;
+      }
+    }
+
+    /* ===== Reduced Motion ===== */
+    @media (prefers-reduced-motion: reduce) {
+      .mobile-sticky {
+        animation: none;
+      }
+      .q-card,
+      .btn-primary {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Compliance-Leiste -->
+  <div class="compliance">
+    <div class="wrap">
+      <b>Hinweis:</b>
+      <span>Diese Seite ist eine kostenlose Lernressource. Keine Anlageberatung, keine Renditeversprechen. Investitionen bergen Risiken, einschließlich Kapitalverlust.</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <span class="mark">JM</span>
+        <span>
+          Institutionelle Perspektive
+          <small>Kostenlose Checkliste · 3 Minuten</small>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#fragen">Prüfkriterien</a>
+        <a href="#inhalt">Was drinsteht</a>
+        <a href="#quelle">Quelle</a>
+        <a href="#klartext">Klartext</a>
+      </div>
+      <button class="nav-cta" onclick="k2()">Checkliste sichern</button>
+    </div>
+  </nav>
+
+  <!-- ===== Personenleiste im Seitenkopf ===== -->
+  <section class="author-bar" aria-label="Autor">
+    <div class="wrap">
+      <div class="author-avatar">
+        <img src="img/1.jpg" alt="Jan H. Müller" width="52" height="52" loading="eager">
+      </div>
+      <div class="author-main">
+        <div class="name">Jan H. Müller</div>
+        <div class="role">Leiter Institutioneller Vertrieb DACH · T. Rowe Price</div>
+        <div class="desc">Über 15 Jahre Erfahrung im institutionellen Vertrieb bei Franklin Templeton und T. Rowe Price. Die Inhalte dieser Checkliste basieren auf seiner beruflichen Perspektive.</div>
+      </div>
+    </div>
+  </section>
+
+  <main id="top">
+
+    <!-- HERO: Text links, Banner-Bild rechts -->
+    <section class="hero">
+      <div class="wrap">
+
+        <!-- LINKS: Text -->
+        <div class="hero-copy">
+          <div class="hero-badge"><span class="dot"></span> Kostenlos · Keine Registrierung</div>
+          <h1>Was institutionelle Anleger<br><em>vor dem Kauf</em> fragen</h1>
+          <p class="lead">
+            Viele schauen nur auf den Kurs. Professionelle Anleger stellen <strong>drei andere Fragen</strong>.
+            Wir haben sie in einer kostenlosen <strong>institutionellen Checkliste</strong> zusammengefasst – klar und ohne Fachchinesisch.
+          </p>
+          <div class="cta-row">
+            <button class="btn-primary" onclick="k2()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Kostenlose Checkliste sichern
+            </button>
+            <a class="btn-ghost" href="#fragen">Erst lesen, was drinsteht</a>
+          </div>
+          <p class="hero-fine">
+            <b>Allgemeine Lerninhalte</b>, keine individuelle Anlageberatung. Investitionen sind mit Risiken verbunden,
+            einschließlich des möglichen Verlusts des eingesetzten Kapitals. Frühere Wertentwicklungen sind kein Indikator für zukünftige Ergebnisse.
+          </p>
+        </div>
+
+        <!-- RECHTS: Banner-Bild im Originalformat -->
+        <div class="hero-visual">
+          <div class="frame">
+            <img
+              src="img/2.jpg"
+              alt="Analyse von Finanzdaten und Marktentwicklungen"
+              width="1200"
+              height="675"
+              loading="eager"
+            >
+          </div>
+          <div class="stat-chip">
+            <div class="num">8</div>
+            <div class="txt">Seiten<br>Institutionelle Checkliste</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Vertrauensleiste -->
+    <div class="trust-strip">
+      <div class="wrap">
+        <div class="trust-item"><div class="k">Erfahrung</div><div class="v">15+ Jahre</div></div>
+        <div class="trust-item"><div class="k">Zielgruppe</div><div class="v">Privatanleger</div></div>
+        <div class="trust-item"><div class="k">Methode</div><div class="v">Grundlagenbasiert</div></div>
+        <div class="trust-item"><div class="k">Kosten</div><div class="v">0 €</div></div>
+      </div>
+    </div>
+
+    <!-- Die 3 Fragen: 左卡片 / 右横幅图片，严格左右布局 -->
+    <section class="section" id="fragen">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Die drei Kernfragen</span>
+          <h2>Nicht „Wie viel kann ich verdienen?“, sondern das hier</h2>
+          <p>Jede Frage wird von einer Selbstprüfung begleitet, die Sie sofort anwenden können.</p>
+        </div>
+
+        <div class="questions-grid">
+          <!-- 左栏：问题卡片 -->
+          <div class="q-cards">
+            <article class="q-card">
+              <div class="q-num">FRAGE 01</div>
+              <h3>Woher kommt die Rendite eigentlich?</h3>
+              <p>Ist es der Markt, ist es Glück oder ist es echtes Können? Wer diese drei nicht trennt, gibt das Verdiente früher oder später zurück.</p>
+              <div class="self-q"><b>Selbsttest:</b> Würde die Logik noch funktionieren, wenn der Gesamtmarkt nicht steigt?</div>
+            </article>
+
+            <article class="q-card">
+              <div class="q-num">FRAGE 02</div>
+              <h3>Was ist der schlimmste Fall – und halte ich ihn aus?</h3>
+              <p>Institutionelle rechnen zuerst den möglichen Verlust, dann den möglichen Gewinn. Wer die Reihenfolge umdreht, verliert schnell die Nerven.</p>
+              <div class="self-q"><b>Selbsttest:</b> Würde ich bei einem Minus von 30 % noch nach meinem ursprünglichen Plan handeln?</div>
+            </article>
+
+            <article class="q-card">
+              <div class="q-num">FRAGE 03</div>
+              <h3>Habe ich die unsichtbaren Kosten eingerechnet?</h3>
+              <p>Gebühren, Spreads, häufiges Handeln, Zeitaufwand. Sie tauchen nicht in der Rendite auf – aber sie kommen aus Ihrer Tasche.</p>
+              <div class="self-q"><b>Selbsttest:</b> Wie viel Prozent meiner erwarteten Rendite frisst die Transaktion?</div>
+            </article>
+          </div>
+
+          <!-- 右栏：横幅图片 -->
+          <div class="questions-visual">
+            <div class="img-box">
+              <img
+                src="img/3.png"
+                alt="Konzentrierte Analyse von Charts und Finanzdaten"
+                width="800"
+                height="600"
+                loading="lazy"
+              >
+            </div>
+            <p class="caption">Institutionelle Anleger beginnen mit dem Risiko – nicht mit der Rendite.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Was drinsteht -->
+    <section class="section inside" id="inhalt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Inhalt der Checkliste</span>
+          <h2>Was enthält die Checkliste?</h2>
+          <p>Keine Aktienlisten, keine Rendite-Screenshots – nur Konzepte und Checklisten, die Sie selbst anwenden können.</p>
+        </div>
+
+        <div class="inside-grid">
+          <div class="inside-item">
+            <div class="tick">✓</div>
+            <div><h4>3 Fragen + Selbsttests</h4><p>Zu jeder Frage zwei konkrete Sätze, die Sie sich selbst stellen können.</p></div>
+          </div>
+          <div class="inside-item">
+            <div class="tick">✓</div>
+            <div><h4>Eine Selbstprüfungs-Tabelle</h4><p>Eigene Positionen eintragen und in 10 Minuten durchgehen.</p></div>
+          </div>
+          <div class="inside-item">
+            <div class="tick">✓</div>
+            <div><h4>5 häufige Denkfehler</h4><p>Hinterherlaufen, Überhandeln, Leverage mit Können verwechseln – und warum das gefährlich ist.</p></div>
+          </div>
+          <div class="inside-item">
+            <div class="tick">✓</div>
+            <div><h4>Risiko-Check in 8 Fragen</h4><p>Vor jedem Einstieg einmal durchgehen.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quelle / Person -->
+    <section class="section" id="quelle">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Hintergrund</span>
+          <h2>Wer hat das zusammengestellt?</h2>
+          <p>Kein Influencer – jemand, der über ein Jahrzehnt im institutionellen Vertrieb gearbeitet hat.</p>
+        </div>
+
+        <div class="person-card">
+          <div class="photo">
+            <img
+              src="img/1.jpg"
+              alt="Porträt eines erfahrenen Finanzfachmanns"
+              width="400"
+              height="400"
+              loading="lazy"
+            >
+          </div>
+          <div>
+            <h3>Jan H. Müller</h3>
+            <div class="role">Leiter Institutioneller Vertrieb DACH · T. Rowe Price</div>
+            <ul>
+              <li>Seit 2018 bei T. Rowe Price, verantwortlich für institutionelle Kunden in Deutschland und Österreich</li>
+              <li>Zuvor über zehn Jahre im institutionellen Vertrieb bei Franklin Templeton</li>
+              <li>Früher Senior Investment Consultant bei Mercer in Frankfurt</li>
+              <li>Bachelor of Arts in Business Administration, Justus-Liebig-Universität Gießen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Klartext -->
+    <section class="section klartext" id="klartext">
+      <div class="wrap">
+        <h2>Klartext</h2>
+        <p class="sub">Diese vier Punkte sind wichtiger als jeder „Tipp“. Bitte zuerst lesen.</p>
+        <div class="klartext-grid">
+          <div class="klartext-item"><h4>Keine Aktienempfehlungen</h4><p>Diese Checkliste sagt Ihnen nicht, was Sie kaufen oder wann. Sie hilft nur, die richtigen Fragen zu stellen.</p></div>
+          <div class="klartext-item"><h4>Keine Renditeversprechen</h4><p>Niemand kann Ihnen eine bestimmte Rendite garantieren. Wer „sicher“ oder „garantiert“ sagt, sollte Sie hellhörig machen.</p></div>
+          <div class="klartext-item"><h4>Keine individuelle Beratung</h4><p>Die Inhalte sind allgemein und berücksichtigen weder Ihr Einkommen noch Ihre Schulden oder Lebenssituation. Die Entscheidung liegt bei Ihnen.</p></div>
+          <div class="klartext-item"><h4>Investitionen bergen Risiken</h4><p>Sie können Geld verlieren, bis hin zum Totalverlust. Was gestern gut lief, muss morgen nicht gut laufen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="wrap">
+        <h2>Jetzt die kostenlose institutionelle Checkliste sichern</h2>
+        <p>8 Seiten, drei Minuten Lesezeit. Keine Registrierung, keine versteckten Kosten.</p>
+        <button class="btn-primary" onclick="k2()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Checkliste kostenlos sichern
+        </button>
+        <p class="legal-mini">Allgemeine Lerninhalte, keine Anlageberatung. Investitionen sind mit Risiken verbunden, einschließlich Kapitalverlust.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <h4>Über diese Seite</h4>
+          <p>Kostenlose Lernressource für Privatanleger. Die Inhalte dienen der allgemeinen Orientierung und stellen keine Anlageberatung dar.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#fragen">Prüfkriterien</a></li>
+            <li><a href="#inhalt">Inhalt der Checkliste</a></li>
+            <li><a href="#quelle">Quelle</a></li>
+            <li><a href="#klartext">Klartext</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="">Datenschutz</a></li>
+            <li><a href="">Impressum</a></li>
+            <li><a href="">AGB</a></li>
+            <li><a href="#klartext">Risikohinweise</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="risk">
+          <strong style="color:#CBD5E1">Risikohinweis:</strong>
+          Diese Seite enthält allgemeine Lerninhalte, keine individuelle Anlageberatung und kein Angebot zum Kauf oder Verkauf von Finanzinstrumenten.
+          Investitionen sind mit Risiken verbunden, einschließlich des möglichen Verlusts des eingesetzten Kapitals. Frühere Wertentwicklungen sind kein Indikator für zukünftige Ergebnisse.
+        </p>
+        <p>© <span id="year"></span>. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobiler feststehender CTA mit Atem-Effekt -->
+  <button class="mobile-sticky" onclick="k2()" aria-label="Kostenlose institutionelle Checkliste sichern">
+    Checkliste kostenlos sichern
+  </button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
