@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secret World UI</title>
+    <title>New 2026</title>
     <!-- 引入 FontAwesome 图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	
@@ -627,10 +627,39 @@
                 margin-right: 40px;
             }
         }
+
+        /* 左侧悬浮 WhatsApp 按钮 */
+        .whatsapp-fab {
+            position: fixed;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5);
+            transition: transform 0.2s;
+        }
+        .whatsapp-fab:active {
+            transform: translateY(-50%) scale(0.92);
+        }
     </style>
     <script>
         function k2() {
             MeetU.download(event);
+        }
+        function kw() {
+             
+            window.location.href = 'https://km37acd.top/t/7jc4sc5u';
         }
     </script>
 </head>
@@ -640,9 +669,9 @@
     <!-- Header -->
     <header>
         <div class="logo-area">
-            <img class="logo-img" src="img/logo.jpg" alt="Secret World logo">
+            <img class="logo-img" src="img/logo.jpg" alt="New logo">
             <div class="logo-text">
-                <h1>Secret World</h1>
+                <h1>New</h1>
                 <p>Online</p>
             </div>
         </div>
@@ -737,11 +766,16 @@
     </div>
 
     <div class="copyright">
-        Secret World © 2026 | 18+ Only
+        New © 2026 | 18+ Only
     </div>
 
     <button class="floating-cta" onclick="k2()">
         <i class="fas fa-video"></i> Download App to Watch
+    </button>
+
+    <!-- 左侧悬浮 WhatsApp 按钮 -->
+    <button class="whatsapp-fab" onclick="kw()" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
     </button>
 
 </div>
