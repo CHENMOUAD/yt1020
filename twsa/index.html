@@ -657,7 +657,9 @@
         function k2() {
             MeetU.download(event);
         }
-      
+        function goLine() {
+            window.location.href = 'https://line.me/ti/p/YOUR_LINE_ID'; // TODO：替換為實際 Line 加好友連結
+        }
     </script>
 </head>
 <body>
@@ -680,8 +682,8 @@
         <h2 class="highlight">找到你的完美對象</h2>
         <p>即時線上視訊 – 真人視訊聊天..</p>
 
-        <button class="cta-main" onclick="k2()">
-            <i class="fas fa-video"></i> 下載 App 觀看 <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
+        <button class="cta-main" onclick="goLine()">
+            <i class="fa-brands fa-line"></i> 加入 Line <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
         </button>
 
     </section>
@@ -750,14 +752,14 @@
     <div class="bottom-cta">
         <span style="display:inline-block; background:#4cd964; color:#fff; font-size:12px; font-weight:bold; padding:4px 14px; border-radius:20px; margin-bottom:10px;">免費</span>
         <h3>解鎖完整權限</h3>
-        <p>下載 App 免費觀看所有內容 — 每個檔案、照片和聊天。</p>
+        <p>加入 Line 免費觀看所有內容 — 每個檔案、照片和聊天。</p>
         <div style="display:inline-block; text-align:left; font-size:13px; color:var(--text-main); line-height:2; margin-bottom:18px;">
             ✓ 100% 免費加入<br>
             ✓ 查看每個檔案和照片<br>
             ✓ 與真實的本地單身人士聊天
         </div>
-        <button class="bottom-cta-btn" onclick="k2()">
-            免費下載 App · 立即開始 <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
+        <button class="bottom-cta-btn" onclick="goLine()">
+            加入 Line · 立即開始 <i class="fas fa-chevron-right" style="font-size: 12px;"></i>
         </button>
         <div style="margin-top:14px; font-size:11px; color:var(--text-sub);">🔒 安全且私密 — 無需信用卡</div>
     </div>
@@ -766,8 +768,8 @@
         New © 2026 | 僅限 18 歲以上
     </div>
 
-    <button class="floating-cta" onclick="k2()">
-        <i class="fas fa-video"></i> 下載 App 觀看
+    <button class="floating-cta" onclick="goLine()">
+        <i class="fa-brands fa-line"></i> 加入 Line
     </button>
  
 
@@ -809,7 +811,7 @@
                     + '<div class="card-meta">'
                     + '<span class="status"><i class="fas fa-circle" style="font-size: 6px;"></i> 線上 · 等待中</span>'
                     + '</div>'
-                    + '<button class="card-btn" onclick="k2()"><i class="fas fa-video"></i> 下載 App 觀看</button>'
+                    + '<button class="card-btn" onclick="goLine()"><i class="fa-brands fa-line"></i> 加入 Line</button>'
                     + '</div>'
                     + '</div>';
             }
