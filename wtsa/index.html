@@ -113,22 +113,10 @@
 
         /* 主视觉区域 */
         .hero {
-            padding: 10px 20px 20px;
+            padding: 40px 20px 20px;
             position: relative;
             z-index: 10;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 220px;
-            height: 220px;
-            background: url('img/8-1.jpg') center/cover;
-            border-radius: 50%;
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 45, 123, 0.30), 0 12px 28px rgba(255, 45, 123, 0.22);
-            z-index: -1;
+            text-align: center;
         }
 
         .hero h2 {
@@ -136,7 +124,7 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 5px;
-            padding-right: 110px;
+            text-align: center;
         }
 
         .hero h2 .highlight {
@@ -150,6 +138,7 @@
             color: var(--text-sub);
             margin-bottom: 20px;
             line-height: 1.5;
+            text-align: center;
         }
 
         .cta-main {
@@ -163,7 +152,7 @@
             font-weight: 800;
             font-size: 16px;
             cursor: pointer;
-			margin-top: 40px;
+            margin-top: 24px;
             box-shadow: 0 6px 18px rgba(255, 45, 123, 0.4);
             transition: transform 0.2s;
         }
@@ -605,12 +594,6 @@
             .hero h2 {
                 font-size: 40px;
             }
-            .hero::before {
-                top: -10px;
-                right: 40px;
-                width: 340px;
-                height: 340px;
-            }
             .stats-bar,
             .features-bar,
             .section-header,
@@ -651,7 +634,7 @@
     </header>
 
     <!-- 首屏主区 -->
-    <section class="hero">
+    <section class="hero"> 
         <h2>新加坡夜生活</h2>
         <h2 class="highlight">大量女生在线随时预约联</h2>
         <p>享受专属的私人放松时光</p>
