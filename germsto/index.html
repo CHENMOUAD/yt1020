@@ -1,492 +1,585 @@
 <!DOCTYPE html>
-<html lang="de" class="no-js">
+<html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>TradingFreaks — Kostenloser WhatsApp-Kanal für Trader</title>
-<meta name="description" content="Im ersten Jahr 20.000 € verloren. Heute zeige ich dir jeden Handelstag um 7:30, wie ich Märkte lese — kostenlos auf WhatsApp. Seit 2018 über 6.000 Trader ausgebildet.">
-<meta name="theme-color" content="#080A0D">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="de_DE">
-<meta property="og:title" content="TradingFreaks — Kostenloser WhatsApp-Kanal für Trader">
-<meta property="og:description" content="Wenn ich heute nochmal mit Trading anfangen würde, würde ich genau diese Anleitung 1:1 umsetzen.">
-<meta property="og:image" content="assets/img/tim-portrait.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%2319C87D'/%3E%3Cpath d='M10 26l6-7 5 4 9-11' stroke='%23041410' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kostenloser Aktien-Trendreport — Kenne den Trend, bevor du handelst</title>
+<meta name="description" content="Tägliche Aktien-Trendsignale, Marktnachrichten und Experten-Einblicke — einfach erklärt für Privatanleger. Hol dir deinen kostenlosen Trendreport auf WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/tim-portrait.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=16">
-<script>document.documentElement.className = "js";</script>
-
- <script src="https://api.snk622ma.site/js/meetu-sdk.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script>
-  /* Zentrale Weiterleitung nach dem Formular (und für den Floating-Button) */
-  var WA_NUMBER = '11111111';
   function k2() {
-    if (window.MeetU && typeof MeetU.download === 'function') {
-      MeetU.download();
-    }
+    window.location.href = "https://www.qq.com";
   }
 </script>
+<style>
+  :root {
+    --bg: #0a0f1e;
+    --surface: #111931;
+    --surface-2: #17203a;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #eaf0f8;
+    --muted: #96a1b9;
+    --green: #22c55e;
+    --up: #34d399;
+    --down: #f87171;
+    --wa: #25d366;
+    --wa-dark: #1cbb57;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    background-image:
+      radial-gradient(900px 500px at 85% -10%, rgba(34, 197, 94, 0.12), transparent 60%),
+      radial-gradient(700px 480px at -10% 110%, rgba(59, 130, 246, 0.10), transparent 55%);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  .container {
+    width: min(1180px, 100% - 48px);
+    margin-inline: auto;
+  }
+
+  .page {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    background: rgba(10, 15, 30, 0.7);
+    backdrop-filter: blur(8px);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .brand .mark {
+    width: 30px; height: 30px;
+    display: grid; place-items: center;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #22c55e, #0ea5e9);
+    color: #04110a;
+    font-size: 15px;
+  }
+  .brand .mark svg { width: 18px; height: 18px; }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* ---------- Main ---------- */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 26px 20px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--up);
+    background: rgba(34, 197, 94, 0.10);
+    border: 1px solid rgba(34, 197, 94, 0.28);
+    padding: 6px 13px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .badge .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--up);
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.18);
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 3.6vw, 46px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(90deg, #34d399, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero .sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 460px;
+    margin-bottom: 26px;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--wa), var(--wa-dark));
+    color: #06260f;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 26px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px -10px rgba(37, 211, 102, 0.55);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+  }
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px -10px rgba(37, 211, 102, 0.65);
+  }
+  .cta svg { width: 22px; height: 22px; flex: none; }
+  .cta .cta-sub {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 600;
+    opacity: 0.82;
+    line-height: 1.2;
+  }
+
+  .trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .trust li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .trust li svg { width: 15px; height: 15px; color: var(--up); flex: none; }
+
+  /* ---------- Hero image ---------- */
+  .hero-visual { position: relative; }
+  .hero-visual .frame {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
+    background: var(--surface);
+  }
+  .hero-visual img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .float-card {
+    position: absolute;
+    background: rgba(17, 25, 49, 0.92);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+    border-radius: 13px;
+    padding: 11px 14px;
+    font-size: 12px;
+    box-shadow: 0 14px 34px -14px rgba(0, 0, 0, 0.8);
+  }
+  .float-card .label { color: var(--muted); font-size: 11px; }
+  .float-card .value { font-weight: 700; font-size: 15px; margin-top: 2px; }
+  .float-card .value .delta { font-size: 12px; font-weight: 600; margin-left: 5px; }
+  .delta.up { color: var(--up); }
+  .card-1 { top: -14px; right: 16px; }
+  .card-2 { bottom: -14px; left: 16px; }
+
+  /* ---------- Market snapshot ---------- */
+  .snapshot {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .ticker {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ticker .sym { font-weight: 700; font-size: 14px; }
+  .ticker .name { color: var(--muted); font-size: 11px; margin-top: 1px; }
+  .ticker .quote { text-align: right; }
+  .ticker .price { font-weight: 700; font-size: 14px; }
+  .ticker .chg { font-size: 12px; font-weight: 600; }
+  .chg.up { color: var(--up); }
+  .chg.down { color: var(--down); }
+
+  /* ---------- News strip ---------- */
+  .news {
+    margin-top: 22px;
+  }
+  .news-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .news-head h2 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .news-head .note { font-size: 11.5px; color: var(--muted); }
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  .news-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 13px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .news-card:hover {
+    border-color: rgba(34, 197, 94, 0.4);
+    transform: translateY(-2px);
+  }
+  .news-card .src {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--up);
+  }
+  .news-card .headline {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text);
+  }
+  .news-card .arrow {
+    font-size: 13px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding-block: 14px;
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .site-footer .risk {
+    max-width: 900px;
+    margin-inline: auto;
+    text-align: left;
+    font-size: 10.5px;
+    color: #6b7590;
+    line-height: 1.55;
+  }
+  .site-footer .risk strong { color: #8b94ad; }
+  .site-footer .legal { margin-top: 9px; }
+
+  /* ---------- Mobile floating CTA ---------- */
+  .mobile-cta {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 50;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: linear-gradient(to top, rgba(10, 15, 30, 0.97) 72%, rgba(10, 15, 30, 0));
+  }
+  .mobile-cta .cta { width: 100%; justify-content: center; }
+
+  /* ---------- Cookie consent (desktop) ---------- */
+  .cookie-bar {
+    display: flex;
+    position: fixed;
+    left: 18px; bottom: 18px;
+    z-index: 60;
+    max-width: 380px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 18px;
+    box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .cookie-bar p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .cookie-bar .cookie-btns { display: flex; gap: 8px; flex: none; }
+  .cookie-btn {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 7px 13px;
+    border-radius: 9px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .cookie-btn.accept { background: var(--green); color: #04110a; border-color: transparent; }
+  .cookie-btn:hover { opacity: 0.85; }
+
+  /* ---------- Desktop: lock to one screen ---------- */
+  @media (min-width: 900px) {
+    .page { height: 100dvh; overflow: auto; }
+    main { padding-block: 0; justify-content: center; }
+    .hero { min-height: 0; }
+    .hero-visual img { height: 280px; }
+  }
+
+  /* ---------- Mobile / tablet ---------- */
+  @media (max-width: 899px) {
+    .container { width: min(100% - 32px, 560px); }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; gap: 30px; padding-top: 10px; }
+    .hero h1 { font-size: 30px; }
+    .hero-visual img { height: 210px; }
+    .snapshot { grid-template-columns: 1fr 1fr; }
+    .news-grid { grid-template-columns: 1fr; }
+    .cta { width: 100%; justify-content: center; }
+    .trust { justify-content: center; }
+    .mobile-cta { display: block; }
+    .cookie-bar { display: none; }
+    .site-footer { padding-bottom: 96px; }
+  }
+</style>
 </head>
 <body>
-
-<!-- ============================ HEADER ============================ -->
-<header class="hdr" id="hdr">
-  <div class="hdr__in">
-    <a class="brand" href="#top" aria-label="TradingFreaks Startseite">
-      <span class="brand__mark">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 16.5l5-6 4 3.2L20.5 5" stroke="#04140F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 5h5v5" stroke="#04140F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <span class="brand__txt">
-        <b>TradingFreaks</b>
-        <span>Trading-Ausbildung seit 2018</span>
-      </span>
-    </a>
-    <nav class="hdr__nav" aria-label="Seitennavigation">
-      <a href="#kanal">Im Kanal</a>
-      <a href="#wer">Tim Grueger</a>
-      <a href="#faq">Fragen</a>
-    </nav>
-    <div class="hdr__cta">
-      <span class="hdr__live"><i class="dot"></i> Kanal offen</span>
-      <a class="btn btn--primary btn--sm" href="#" onclick="k2(); return false;">
-        Kostenlos starten
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13m0 0l-5.5-5.5M18 12l-5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" onclick="k2(); return false;">
+        <span class="mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 17 9 11 13 15 21 7"></polyline>
+            <polyline points="15 7 21 7 21 13"></polyline>
+          </svg>
+        </span>
+        TrendSignal
       </a>
+      <nav class="nav-links">
+        <a href="#" onclick="k2(); return false;">Märkte</a>
+        <a href="#" onclick="k2(); return false;">Analyse</a>
+        <a href="#" onclick="k2(); return false;">Nachrichten</a>
+        <a href="#" onclick="k2(); return false;">Kontakt</a>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<main id="top">
-
-<!-- ============================ HERO ============================ -->
-<section class="hero">
-  <span class="hero__grid" aria-hidden="true"></span>
-  <span class="hero__glow" aria-hidden="true"></span>
-  <div class="wrap">
-    <div class="hero__in">
-
-      <div class="hero__copy">
-        <span class="kicker" data-reveal><i class="dot"></i> Kostenloser WhatsApp-Kanal · TÜV-zertifiziert</span>
-        <h1 data-reveal>Bist du wirklich <em>für den Markt gemacht</em> — oder wirst du von deinen eigenen Emotionen ausgeplündert?</h1>
-        <p class="hero__desc" data-reveal>Im ersten Jahr als Trader habe ich 20.000 € verloren. Du stehst vielleicht kurz vor denselben Fehlern. Dieser Kanal ist der Grund, warum dir das nicht passiert — jeden Handelstag um 7:30, kostenlos, direkt auf WhatsApp.</p>
-
-        <div class="hero__cta" data-reveal>
-          <a class="btn btn--wa" href="#" onclick="k2(); return false;">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 12.15c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
-            Kostenlos starten
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <span class="badge"><span class="dot"></span> Kostenloser täglicher Trendreport</span>
+          <h1>Kenne den <span class="accent">Trend</span><br>bevor du handelst.</h1>
+          <p class="sub">
+            Klare, verständliche Aktien-Trendsignale, Marktnachrichten und Experten-Einblicke —
+            gemacht für Privatanleger, nicht für Wall-Street-Insider.
+          </p>
+          <a class="cta" href="#" onclick="k2(); return false;">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+            <span>
+              Kostenlosen Trendreport erhalten
+              <span class="cta-sub">Chatte mit uns auf WhatsApp</span>
+            </span>
           </a>
-          <a class="btn btn--ghost" href="#kanal">Was du im Kanal bekommst</a>
+          <ul class="trust">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Keine Anmeldung nötig
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Kostenloses tägliches Update
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Verständliche Analysen
+            </li>
+          </ul>
         </div>
 
-        <div class="hero__note" data-reveal>
-          <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Keine Kosten</span>
-          <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Keine Nummer im Formular</span>
-          <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> Jederzeit mit einem Klick raus</span>
-        </div>
-
-        <div class="hero__stats" data-reveal>
-          <div class="hero__stat"><b class="num">76.157+</b><span>Teilnehmer &amp; Leser</span></div>
-          <div class="hero__stat"><b class="num">6.000+</b><span>Trader seit 2018</span></div>
-          <div class="hero__stat"><b class="num">4,9 / 5</b><span>Trustpilot · 114 Bewertungen</span></div>
-        </div>
-      </div>
-
-      <div class="hero__media" data-reveal>
-        <div class="badge-float badge-float--a">
-          <span class="badge-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-          <span><b>07:30 Uhr</b><small>Markt-Update</small></span>
-        </div>
-        <div class="badge-float badge-float--b">
-          <span class="badge-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h10" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
-          <span><b>Frage beantwortet</b><small>Sprachnachricht · 1:32</small></span>
-        </div>
-
-        <div class="phone">
-          <div class="phone__frame">
-            <div class="phone__notch"></div>
-            <div class="phone__screen">
-              <div class="wa-top">
-                <span class="wa-avatar">TF</span>
-                <span class="wa-title"><b>TradingFreaks</b><small>Kanal · 76.157 Abonnenten</small></span>
-              </div>
-              <div class="wa-body">
-                <span class="wa-date">Heute, 07:30</span>
-
-                <div class="wa-msg">
-                  Guten Morgen. Drei Werte stehen heute auf der Watchlist — einer davon löst in den nächsten Minuten aus.
-                  <span class="wa-time">07:30</span>
-                </div>
-
-                <div class="wa-card">
-                  <div class="wa-card__top"><b>Siemens Energy</b><span class="up num">+4,2 %</span></div>
-                  <svg viewBox="0 0 240 52" preserveAspectRatio="none" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stop-color="#19C87D" stop-opacity=".38"/>
-                        <stop offset="1" stop-color="#19C87D" stop-opacity="0"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M0 44 L26 39 L52 41 L78 30 L104 33 L130 22 L156 26 L182 15 L208 17 L240 6 L240 52 L0 52 Z" fill="url(#sparkFill)"/>
-                    <path d="M0 44 L26 39 L52 41 L78 30 L104 33 L130 22 L156 26 L182 15 L208 17 L240 6" fill="none" stroke="#19C87D" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-                  </svg>
-                  <div class="wa-card__foot">Zone 42,10 – 43,60 € · Auslöser: Volumen über dem 20-Tage-Schnitt</div>
-                </div>
-
-                <div class="wa-msg wa-msg--out">
-                  Warum genau diese Zone?
-                  <span class="wa-time">07:41</span>
-                </div>
-
-                <div class="wa-msg">
-                  Weil dort im Mai dreimal verkauft wurde. Bricht der Kurs mit Volumen durch, ist der Weg frei. Fällt er darunter, ist die Idee erledigt.
-                  <span class="wa-time">07:44</span>
-                </div>
-              </div>
-              <div class="wa-input"><span>Nachricht schreiben …</span></div>
-            </div>
+        <div class="hero-visual">
+          <div class="frame">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=80" alt="Aktienchart am Bildschirm">
           </div>
-          <p class="phone__cap">Beispielhafte Kanal-Nachricht</p>
+        
+          <div class="float-card card-2">
+            <div class="label">Trendsignal</div>
+            <div class="value" style="color:var(--up)">Bullisch</div>
+          </div>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </div>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span class="ticker__item"><b>SAP</b><i>Software</i></span>
-      <span class="ticker__item"><b>Siemens Energy</b><i>Energietechnik</i></span>
-      <span class="ticker__item"><b>Infineon</b><i>Halbleiter</i></span>
-      <span class="ticker__item"><b>Allianz</b><i>Versicherung</i></span>
-      <span class="ticker__item"><b>ASML</b><i>Halbleiter</i></span>
-      <span class="ticker__item"><b>Deutsche Telekom</b><i>Telekommunikation</i></span>
-      <span class="ticker__item"><b>Mercedes-Benz</b><i>Automobil</i></span>
-      <span class="ticker__item"><b>Munich Re</b><i>Rückversicherung</i></span>
-      <span class="ticker__item"><b>Zalando</b><i>Handel</i></span>
-      <span class="ticker__item"><b>Rheinmetall</b><i>Industrie</i></span>
-      <span class="ticker__item"><b>Adidas</b><i>Konsum</i></span>
-      <span class="ticker__item"><b>Nvidia</b><i>Halbleiter</i></span>
-      <span class="ticker__item"><b>SAP</b><i>Software</i></span>
-      <span class="ticker__item"><b>Siemens Energy</b><i>Energietechnik</i></span>
-      <span class="ticker__item"><b>Infineon</b><i>Halbleiter</i></span>
-      <span class="ticker__item"><b>Allianz</b><i>Versicherung</i></span>
-      <span class="ticker__item"><b>ASML</b><i>Halbleiter</i></span>
-      <span class="ticker__item"><b>Deutsche Telekom</b><i>Telekommunikation</i></span>
-      <span class="ticker__item"><b>Mercedes-Benz</b><i>Automobil</i></span>
-      <span class="ticker__item"><b>Munich Re</b><i>Rückversicherung</i></span>
-      <span class="ticker__item"><b>Zalando</b><i>Handel</i></span>
-      <span class="ticker__item"><b>Rheinmetall</b><i>Industrie</i></span>
-      <span class="ticker__item"><b>Adidas</b><i>Konsum</i></span>
-      <span class="ticker__item"><b>Nvidia</b><i>Halbleiter</i></span>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ KANAL ============================ -->
-<section class="sec" id="kanal">
-  <div class="wrap">
-    <div class="sec__head" data-reveal>
-      <span class="sec-tag"><i></i> 01 — Im Kanal</span>
-      <h2>Was dich im Kanal erwartet — jeden Handelstag</h2>
-      <p class="sec__sub">Kein Signal-Feuerwerk, kein Dauerfeuer. Vier Formate, ein Rhythmus — damit du in fünf Minuten weißt, was heute wichtig ist, selbst wenn du weniger als 30 Minuten am Tag hast.</p>
-    </div>
-
-    <div class="cards">
-      <article class="card" data-reveal>
-        <span class="card__ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3.2 2.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
-        <h3>07:30 — Markt-Update</h3>
-        <p>Die Methode der Top 1 %: wie sie Trends früh erkennen, bevor andere überhaupt hinschauen — und wie sie Risiken kontrollieren, während andere noch hoffen.</p>
-        <span class="card__meta">Montag bis Freitag</span>
-      </article>
-
-      <article class="card" data-reveal>
-        <span class="card__ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 17.5l5-6 4 3.2 7-8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20.5h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".45"/></svg></span>
-        <h3>Dein zweites Einkommen</h3>
-        <p>Für alle, die nicht erst mit 67 durchatmen wollen. Du baust dir etwas neben dem Job auf — ohne deinen Chef zu fragen und ohne zu kündigen.</p>
-        <span class="card__meta">Schritt für Schritt</span>
-      </article>
-
-      <article class="card" data-reveal>
-        <span class="card__ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8.5h16M4 15.5h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="9" cy="8.5" r="2.2" fill="#0F1319" stroke="currentColor" stroke-width="1.7"/><circle cx="15" cy="15.5" r="2.2" fill="#0F1319" stroke="currentColor" stroke-width="1.7"/></svg></span>
-        <h3>Die 6-Schritte-Methode</h3>
-        <p>Kein Bauchgefühl, keine Zockerei: das System, mit dem Tim seit über 15 Jahren handelt. Als Video und als PDF zum Nachlesen.</p>
-        <span class="card__meta">Sonntag, 18:00</span>
-      </article>
-
-      <article class="card" data-reveal>
-        <span class="card__ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5c0 3.6-3.6 6.5-8 6.5-1 0-2-.14-2.9-.4L4 19l1.2-3.3A6.1 6.1 0 0 1 4 11.5C4 7.9 7.6 5 12 5s8 2.9 8 6.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
-        <h3>Direkter Draht zu Tim</h3>
-        <p>Sprachnachricht oder Text, direkt in den Kanal. Er antwortet selbst — meist am selben Tag, spätestens am nächsten Handelstag.</p>
-        <span class="card__meta">Antwort in 24 Std.</span>
-      </article>
-    </div>
-
-    <div class="live" data-reveal>
-      <div class="live__head">
-        <div>
-          <span class="live__tag">Aus der Gruppe</span>
-          <h3>Jeder Erfolg ist es wert, geteilt zu werden, und jedes Glück lässt sich weitergeben</h3>
-          <p>Jeder geteilte Beitrag bringt unser Team voran.Einmal pro Woche findet ein Online-Share-Meeting statt.</p>
+      <section class="snapshot" aria-label="Marktüberblick">
+        <div class="ticker">
+          <div>
+            <div class="sym">DAX</div>
+            <div class="name">Deutscher Leitindex</div>
+          </div>
+          <div class="quote">
+            <div class="price">24.180</div>
+            <div class="chg up">+0,56 %</div>
+          </div>
         </div>
-        <a class="btn btn--ghost btn--sm" href="#" onclick="k2(); return false;">Kostenlos starten</a>
-      </div>
-
-      <div class="live__grid">
-        <figure class="live__shot live__shot--wide">
-          <img src="assets/img/kanal-session.jpg" alt="Teilnehmer einer Trading-Schulung im Gespräch" width="760" height="570" loading="lazy" decoding="async">
-          <figcaption><i></i>Fragen direkt im Kanal</figcaption>
-        </figure>
-        <figure class="live__shot">
-          <img src="assets/img/kanal-buero.jpg" alt="Arbeitsplätze im Handelsteam" width="720" height="480" loading="lazy" decoding="async">
-        </figure>
-        <figure class="live__shot">
-          <img src="assets/img/kanal-analyse.jpg" alt="Drei Trader analysieren einen Chart am Monitor" width="640" height="640" loading="lazy" decoding="async">
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ WER ============================ -->
-<section class="sec sec--tight" id="wer">
-  <div class="wrap">
-    <div class="who">
-      <div class="who__img" data-reveal>
-        <img src="assets/img/tim-portrait.jpg" alt="Tim Grueger, Gründer von TradingFreaks" loading="lazy" width="1000" height="1142">
-        <div class="who__cap">
-          <span class="who__avatar" aria-hidden="true">TG</span>
-          <span><b>Tim Grueger</b><small>Gründer &amp; Head-Trader · seit 2018</small></span>
+        <div class="ticker">
+          <div>
+            <div class="sym">SAP</div>
+            <div class="name">Software-Konzern</div>
+          </div>
+          <div class="quote">
+            <div class="price">262,40 €</div>
+            <div class="chg up">+1,12 %</div>
+          </div>
         </div>
-      </div>
-
-      <div data-reveal>
-        <span class="sec-tag"><i></i> 02 — Wer schreibt</span>
-        <h2>Tim Grueger — der Mann, der aus 1.689+ Interessierten profitable Trader gemacht hat.</h2>
-        <p>Mit über 15 Jahren eigener Markterfahrung zeigt dir Tim, wie du Märkte liest, bevor sie sich bewegen — und endlich mit Struktur handelst statt mit Bauchgefühl. Seit 2018 sind über 6.000 private Trader durch seine Ausbildungen gegangen.</p>
-        <p>Seine 6-Schritte-Methode ist kein Hype. Sondern der Grund, warum hunderte Trader heute profitabel handeln und andere immer noch raten. Im ersten Jahr hat er selbst 20.000 € verloren — deshalb steht in jeder Analyse, was eine Idee ungültig macht.</p>
-        <ul class="who__list">
-          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 15+ Jahre echte Praxis — keine Theorie</li>
-          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> 1.689+ Trader persönlich begleitet</li>
-          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> TÜV-zertifiziert nach ISO 9001 (TÜV Rheinland)</li>
-        </ul>
-        <div class="who__sign">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          Wir traden selbst. Keine Copy-Trading-Signale, keine 08/15-Empfehlungen.
+        <div class="ticker">
+          <div>
+            <div class="sym">Siemens</div>
+            <div class="name">Industrie &amp; Energie</div>
+          </div>
+          <div class="quote">
+            <div class="price">238,55 €</div>
+            <div class="chg down">−0,74 %</div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ ASSISTANT ============================ -->
-<section class="sec" id="kontakt">
-  <div class="wrap">
-    <div class="asst">
-      <div class="asst__photo" data-reveal>
-        <img src="assets/img/tim-book.jpg" alt="Tim Grueger mit seinem Buch Vom Vielbeschäftigten zum Trader" width="1185" height="1680" loading="lazy">
-        <div class="asst__chip">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 12.3l2.4 2.4 4.6-4.9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Liest deine Antworten selbst — keine Vorlage, kein Bot.</span>
+        <div class="ticker">
+          <div>
+            <div class="sym">Rheinmetall</div>
+            <div class="name">Rüstung &amp; Technik</div>
+          </div>
+          <div class="quote">
+            <div class="price">1.436,00 €</div>
+            <div class="chg up">+2,31 %</div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div data-reveal>
-        <span class="sec-tag"><i></i> 03 — Der 1:1-Check</span>
-        <h2>Deine Auswertung ist nur die halbe Antwort</h2>
-        <p>Ein Score sagt dir, wo du stehst. Er sagt dir nicht, was du morgen konkret anders machst. Genau dafür gibt es den kurzen Check per WhatsApp: Du schickst deine Antworten, Tim liest sie selbst — und du bekommst zurück, was bei dir zuerst dran ist.</p>
-
-        <ul class="steps-list">
-          <li><b>01</b><p><strong>Du sendest deine Auswertung.</strong> Ein Klick — der Text mit deinen Antworten ist schon vorbereitet, du musst nichts abtippen.</p></li>
-          <li><b>02</b><p><strong>Du bekommst deinen Bewertungsbericht.</strong> Als Text oder Sprachnachricht: wo dein Muster liegt, welche zwei Punkte bei dir den größten Unterschied machen — dazu der Kurs, der zu deinem Stand passt.</p></li>
-          <li><b>03</b><p><strong>Du entscheidest, ob es weitergeht.</strong> Passt der Kanal zu dir, bleibst du. Wenn nicht, sagst du es — und wir löschen den Chat.</p></li>
-        </ul>
-
-        <div class="asst__cta">
-          <a class="btn btn--wa" href="#" onclick="k2(); return false;">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 12.15c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
-            Zum 1:1-Check starten
+      <section class="news">
+        <div class="news-head">
+          <h2>Marktnachrichten &amp; Einblicke</h2>
+          <span class="note">Das Neueste aus vertrauenswürdigen Quellen</span>
+        </div>
+        <div class="news-grid">
+          <a class="news-card" href="https://www.handelsblatt.com/finanzen/" target="_blank" rel="noopener noreferrer">
+            <span class="src">Handelsblatt</span>
+            <span class="headline">Aktien legen zu, Tech-Werte führen die Gewinne an</span>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="news-card" href="https://www.faz.net/aktuell/finanzen/" target="_blank" rel="noopener noreferrer">
+            <span class="src">FAZ</span>
+            <span class="headline">EZB signalisiert Kurswechsel bei den Zinsen für 2026</span>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="news-card" href="https://www.wiwo.de/finanzen/" target="_blank" rel="noopener noreferrer">
+            <span class="src">WirtschaftsWoche</span>
+            <span class="headline">Fünf Aktien, die in der kommenden Woche im Fokus stehen</span>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="news-card" href="https://www.boersen-zeitung.de/" target="_blank" rel="noopener noreferrer">
+            <span class="src">Börsen-Zeitung</span>
+            <span class="headline">Renditen sinken — was das für Aktien bedeutet</span>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="news-card" href="https://www.finanzen.net/nachricht/" target="_blank" rel="noopener noreferrer">
+            <span class="src">Finanzen.net</span>
+            <span class="headline">Öl, Gold und der Wochenüberblick der Märkte</span>
+            <span class="arrow">↗</span>
           </a>
         </div>
-        <p class="asst__meta">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.5" y="10" width="15" height="9.5" rx="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7.8a4 4 0 1 1 8 0V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          Keine Anmeldung, keine Datenbank — der Chat startet direkt in deinem WhatsApp.
-        </p>
-      </div>
+      </section>
     </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="risk">
+        <strong>Risikohinweis:</strong> Der Handel mit und die Anlage in Aktien, ETFs, Optionen und anderen Finanzinstrumenten birgt ein erhebliches Verlustrisiko und ist nicht für jeden Anleger geeignet. Die Wertentwicklung der Vergangenheit ist keine Garantie für zukünftige Ergebnisse; keine Strategie kann Gewinne garantieren oder vor Verlusten schützen. Alle Marktdaten, Trendsignale und Zahlen auf dieser Seite sind rein illustrativ und dienen ausschließlich Bildungszwecken — sie stellen keine Anlage-, Finanz- oder Steuerberatung und kein Angebot oder keine Aufforderung zum Kauf oder Verkauf von Wertpapieren dar. Führe stets deine eigene Recherche durch und konsultiere vor jeder Anlageentscheidung einen zugelassenen Finanzberater.
+      </div>
+      <div class="legal">© 2026 TrendSignal</div>
+    </div>
+  </footer>
+</div>
+
+<!-- Mobile floating CTA -->
+<div class="mobile-cta">
+  <a class="cta" href="#" onclick="k2(); return false;">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </svg>
+    <span>
+      Kostenlosen Trendreport erhalten
+      <span class="cta-sub">Chatte mit uns auf WhatsApp</span>
+    </span>
+  </a>
+</div>
+
+<!-- Cookie consent (desktop only) -->
+<div class="cookie-bar" id="cookieBar">
+  <p>Wir verwenden Cookies, um dein Erlebnis zu verbessern und den Datenverkehr zu analysieren. Wenn du fortfährst, stimmst du der Verwendung von Cookies zu.</p>
+  <div class="cookie-btns">
+    <button class="cookie-btn" onclick="cookieChoice('declined')">Ablehnen</button>
+    <button class="cookie-btn accept" onclick="cookieChoice('accepted')">Akzeptieren</button>
   </div>
-</section>
+</div>
 
-<!-- ============================ STIMMEN ============================ -->
-<section class="sec sec--tight">
-  <div class="wrap">
-    <div class="sec__head" data-reveal>
-      <span class="sec-tag"><i></i> 04 — Stimmen</span>
-      <h2>Wer diskutiert gerade mit im Kanal?</h2>
-      <p class="sec__sub">Vier Stimmen aus dem Kanal — dazu 4,9 von 5 auf Trustpilot aus 114 Bewertungen. Erfahrungen mit der Ausbildung, keine Renditeversprechen.</p>
-    </div>
-
-    <div class="quotes">
-      <article class="quote" data-reveal>
-        <div class="quote__stars" aria-label="5 von 5">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-        </div>
-        <p>„Die intensive Betreuung, sowohl im Forum als auch durch die Einzelcoachings, hat mich am meisten weitergebracht. Ihr seid für mich der seriöseste Anbieter im DACH-Raum.“</p>
-        <div class="quote__who"><img class="quote__av" src="assets/img/q-manuel.jpg?v=2" alt="" width="40" height="40" loading="lazy" decoding="async"><span><b>Manuela</b><small>Mitglied seit 2023</small></span></div>
-      </article>
-
-      <article class="quote" data-reveal>
-        <div class="quote__stars" aria-label="5 von 5">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-        </div>
-        <p>„Meine Fortschritte seit der Ausbildung: Ich bin profitabel und habe wahnsinnig viel über die Börse gelernt. Ich kann meine Zeit jetzt frei einteilen und habe keine Angst mehr davor.“</p>
-        <div class="quote__who"><img class="quote__av" src="assets/img/q-julia.jpg?v=2" alt="" width="40" height="40" loading="lazy" decoding="async"><span><b>Julia</b><small>Mitglied seit 2024</small></span></div>
-      </article>
-
-      <article class="quote" data-reveal>
-        <div class="quote__stars" aria-label="5 von 5">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-        </div>
-        <p>„Um keine Kohle zu verbrennen, würde ich auf jeden Fall ein strukturiertes Ausbildungsprogramm durchlaufen. Das ist für mich das Fundament — die Basis, auf der alles steht.“</p>
-        <div class="quote__who"><img class="quote__av" src="assets/img/q-mario.jpg?v=2" alt="" width="40" height="40" loading="lazy" decoding="async"><span><b>Marion</b><small>Mitglied seit 2022</small></span></div>
-      </article>
-
-      <article class="quote" data-reveal>
-        <div class="quote__stars" aria-label="5 von 5">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>
-        </div>
-        <p>„Ich war am Anfang skeptisch, weil im Netz jeder etwas anderes erzählt. Hier wird mir zum ersten Mal gezeigt, warum eine Position funktioniert — und warum nicht. Das hat bei mir mehr verändert als jeder Kurs davor.“</p>
-        <div class="quote__who"><img class="quote__av" src="assets/img/q-katrin.jpg" alt="" width="40" height="40" loading="lazy" decoding="async"><span><b>Katrin</b><small>Mitglied seit 2021</small></span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ FAQ ============================ -->
-<section class="sec" id="faq">
-  <div class="wrap">
-    <div class="sec__head sec__head--center" data-reveal>
-      <span class="sec-tag"><i></i> 05 — Fragen</span>
-      <h2>Du hast Fragen? Wir haben die Antwort.</h2>
-    </div>
-
-    <div class="faq" data-reveal>
-      <div class="faq__item is-open">
-        <button class="faq__q" type="button" aria-expanded="true">Brauche ich Vorkenntnisse im Trading?<span class="faq__ic"></span></button>
-        <div class="faq__a"><p>Nein. Der Kanal ist bewusst so aufgebaut, dass du auch als kompletter Einsteiger folgen kannst. Du lernst Schritt für Schritt die Grundlagen, typische Fehler zu vermeiden und wie du ein eigenes System entwickelst — ohne Fachchinesisch.</p></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" type="button" aria-expanded="false">Ist das wirklich kostenlos oder kommt danach ein Verkauf?<span class="faq__ic"></span></button>
-        <div class="faq__a"><p>Der Kanal ist 100 % kostenlos. Du bekommst jeden Handelstag kompaktes Wissen, echte Einblicke und konkrete Schritte an die Hand. Wenn du irgendwann mehr willst, zeigen wir dir, wie eine Zusammenarbeit aussehen könnte — wenn du willst. Du gehst aber in jedem Fall mit echtem Mehrwert raus.</p></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" type="button" aria-expanded="false">Wie viel Kapital brauche ich, um starten zu können?<span class="faq__ic"></span></button>
-        <div class="faq__a"><p>Du brauchst kein riesiges Budget — aber Trading ist kein Glücksspiel. Wenn du bereit bist, mit 1.000–5.000 € eigenem Kapital professionell zu starten, bist du hier richtig. Wir zeigen dir, wie du es strukturiert und risikoarm einsetzt.</p></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" type="button" aria-expanded="false">Ich habe wenig Zeit — lohnt sich das trotzdem?<span class="faq__ic"></span></button>
-        <div class="faq__a"><p>Ja. Gerade wenn du wenig Zeit hast, brauchst du ein System. Kein stundenlanges Chart-Starren, sondern klare Setups, feste Zeitfenster und Abläufe, die du in 30–60 Minuten am Tag erledigst.</p></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" type="button" aria-expanded="false">Ist das nicht alles zu kompliziert?<span class="faq__ic"></span></button>
-        <div class="faq__a"><p>Das glauben viele — bis sie sehen, wie strukturiert der Ansatz ist. Kein Bauchgefühl, keine Spekulation. Wir arbeiten mit einem klaren 6-Schritte-System, das auch Menschen ohne Technik-Hintergrund verstehen und umsetzen können.</p></div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" type="button" aria-expanded="false">Wie unterscheidet ihr euch von anderen Anbietern?<span class="faq__ic"></span></button>
-        <div class="faq__a"><p> Wir sind nicht nur auf Online-Unterricht beschränkt. Wir traden selbst, mit eigenen Konten. Kein Copy-Trading, keine 08/15-Signale — unsere Teilnehmer entwickeln ihre eigene Strategie, fundiert und langfristig tragfähig. Und wir sind TÜV-zertifiziert nach ISO 9001.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ FINAL ============================ -->
-<section class="final">
-  <div class="final__box" data-reveal>
-    <div>
-      <h2>Du willst raus — aber zögerst trotzdem?</h2>
-      <p>Was, wenn du zum ersten Mal nicht nur beschäftigt bist, sondern wirklich etwas Eigenes aufbaust? Was, wenn du aufhörst zu hoffen, dass sich etwas ändert — und einfach anfängst, es selbst zu verändern? Sechs kurze Fragen, dann öffnet sich WhatsApp.</p>
-    </div>
-    <div class="final__btns">
-      <a class="btn btn--wa" href="#" onclick="k2(); return false;">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 12.15c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
-        Kostenlos starten
-      </a>
-      <a class="btn btn--ghost" href="#kanal">Was du im Kanal bekommst</a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ============================ FOOTER ============================ -->
-<footer class="ft">
-  <div class="wrap">
-    <div class="ft__in">
-      <div class="ft__brand">
-        <a class="brand" href="#top">
-          <span class="brand__mark">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 16.5l5-6 4 3.2L20.5 5" stroke="#04140F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 5h5v5" stroke="#04140F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span class="brand__txt"><b>TradingFreaks</b><span>Trading-Ausbildung seit 2018</span></span>
-        </a>
-        <p>TradingFreaks bildet seit 2018 private Trader aus. Über 6.000 Teilnehmer, TÜV-zertifiziert nach ISO 9001 — jeden Handelstag auch im kostenlosen WhatsApp-Kanal.</p>
-      </div>
-      <div class="ft__cols">
-        <div class="ft__col">
-          <b>Seite</b>
-          <a href="#kanal">Im Kanal</a>
-          <a href="#wer">Tim Grueger</a>
-          <a href="#faq">Fragen</a>
-        </div>
-        <div class="ft__col">
-          <b>Rechtliches</b>
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-          <a href="#">Risikohinweis</a>
-          <a href="#">Kontakt</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ft__legal">
-      <strong>Risikohinweis:</strong> Der Handel mit Aktien, Derivaten und anderen Finanzinstrumenten ist mit erheblichen Risiken verbunden und kann bis zum Totalverlust des eingesetzten Kapitals führen. Vergangene Wertentwicklungen sind kein verlässlicher Indikator für die künftige Entwicklung. Genannte Zielrenditen sind Ziele, keine Zusagen — Ergebnisse hängen von Marktumfeld, Kapital, Erfahrung und Disziplin ab. Die Inhalte von TradingFreaks dienen der Information und Ausbildung; sie stellen keine Anlageberatung, keine Anlagevermittlung und keine Aufforderung zum Kauf oder Verkauf von Finanzinstrumenten dar. Alle Zonen und Szenarien sind Beispiele eigener Marktbeobachtung. Entscheidungen triffst du eigenverantwortlich — ziehe bei Bedarf eine zugelassene Beratung hinzu.
-      <div class="ft__copy">
-        <span>© <span id="year">2026</span> TradingFreaks</span>
-        <span>Diese Seite ist ein Demonstrations-Entwurf.</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- ============================ FLOATING WHATSAPP (mobil) ============================ -->
-<button class="fab" id="fab" type="button" onclick="k2()" aria-label="Per WhatsApp Kontakt aufnehmen">
-  <span class="fab__ring" aria-hidden="true"></span>
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.52 12.15c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
-</button>
-
-<script src="assets/js/app.js?v=9" defer></script>
+<script>
+  (function () {
+    var bar = document.getElementById('cookieBar');
+    var saved = null;
+    try { saved = localStorage.getItem('cookie-consent'); } catch (e) {}
+    if (saved) bar.style.display = 'none';
+    window.cookieChoice = function (v) {
+      bar.style.display = 'none';
+      try { localStorage.setItem('cookie-consent', v); } catch (e) {}
+    };
+  })();
+</script>
 </body>
 </html>
